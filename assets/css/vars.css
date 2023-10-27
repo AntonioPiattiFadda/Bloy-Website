@@ -1,0 +1,24 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --linear: linear-gradient(
+    245.29deg,
+    rgba(109, 193, 220, 1) 2.386939153075218%,
+    rgba(94, 23, 235, 1) 23.382370173931122%,
+    rgba(252, 150, 187, 1) 60.601967573165894%,
+    rgba(255, 195, 151, 1) 100%
+  );
+  --background: #121212;
+  --linearletras: linear-gradient(
+    51.27deg,
+    rgba(94, 23, 235, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  --naranja: #f9a826;
+  --violeta: #5e17eb;
+  --blnaco: #ffffff;
+
+  /* Fonts */
+
+  /* Effects */
+}
