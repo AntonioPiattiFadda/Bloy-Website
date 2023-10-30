@@ -10,25 +10,38 @@
     <body>
         <header class="header" id="header">
             <nav class="navbar">
-                    <img class="logo" src="./assets/img/logo-1.png" /> <img class="menu" src="./assets//img/menu-fill0-wght400-grad0-opsz24-1.svg" />
+                    <img class="logo" src="./assets/img/logo-1.png" /> 
+                    <div class="navbar__menu">
+                      <ul>
+                        <li>Inicio</li>
+                        <li>Servicios</li>
+                        <li>Metodologías</li>
+                        <li>Nosotros</li>
+                      </ul>
+                    </div>
+                    <div class="navbar__buttons">
+                      <ul>
+                        <li><button>Contactanos</button></li>
+                        <li><button>ES</button></li>
+                        <li><button>EN</button></li>
+                      </ul>
+                    </div>
+                    <img class="navbar__menu-icon" src="./assets//img/menu-fill0-wght400-grad0-opsz24-1.svg" />
             </nav>
         </header>
     
         <main class="main">
             <section class="home section" id="home">
                 <div class="home__container">
-                    <h1 class="home__title" >Transformación digital <br/>
-                      para tu negocio.</h1>
-                      <p class="home__subtitle" >Convertimos tus ideas en realidad.</p>
-                      <button  class="home__button">Saber mas</button>
-                      <div class="home__expand-container">
-                        <img src='./assets/img/expand_more_FILL0_wght400_GRAD0_opsz24 1.svg' alt="">
-                        <img src='./assets/img/expand_more_FILL0_wght400_GRAD0_opsz24 1.svg' alt="">
-                      </div>
-                      <div class="home__video-overlay"></div>
-                      <video loop autoplay>
-                        <source src="./assets/video/world.mp4">
-                      </video>
+                    <div class="home__container-left">
+                      <h1>Transformacion <span class="home__title-animation">digital <div class="home__title-decoration"></div> </span><br> para tu negocio</h1>
+                      <p>Convertimos tus ideas en realidad</p>
+                      <div class="home__background"></div>
+                    </div>
+                    <div class="home__container-right">
+                      <img class="hero__img" src="./assets/img/undraw_pair_programming_re_or4x 1hero_img.svg" alt="Ilustracion de dos personas trabajando con un ordenador">
+                      <div class="home__background"></div>
+                    </div>
                 </div>
             </section>
     
