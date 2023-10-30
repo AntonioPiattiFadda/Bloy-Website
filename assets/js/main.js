@@ -1,3 +1,19 @@
+/*==================== HERO TITLE ANIMATION ====================*/
+const typed = new Typed('.typed', {
+  strings: ['Digital', 'Agil', 'Eficaz'],
+  typeSpeed: 300,
+  startDelay: 300,
+  backSpeed: 75,
+  smartBackspace: true,
+  shuffle: false,
+  backDelay: 1500,
+  loop: true,
+  loopCount: false,
+  showCursor: true,
+  cursorChar: '_',
+  contentType: 'html',
+});
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
   navToogle = document.getElementById('nav-toogle'),
@@ -50,34 +66,6 @@ function openSkillsBar2() {
 skillsIcon2.addEventListener('click', openSkillsBar2);
 
 /*==================== QUALIFICATION TABS ====================*/
-
-const qd1 = document.getElementById('qualification__data-info1');
-const qd2 = document.getElementById('qualification__data-info2');
-const qd3 = document.getElementById('qualification__data-info3');
-const qd4 = document.getElementById('qualification__data-info4');
-
-const cargarImagen = (entradas, oservador) => {
-  entradas.forEach((entrada) => {
-    if (entrada.isIntersecting) {
-      console.log('Imagen dentro del VP');
-      entrada.target.classList.add('visible');
-    } else {
-      // No se si me gusta este efecto
-      /* entrada.target.classList.remove('visible');*/
-    }
-  });
-};
-
-const observador = new IntersectionObserver(cargarImagen, {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.8,
-});
-
-observador.observe(qd1);
-observador.observe(qd2);
-observador.observe(qd3);
-observador.observe(qd4);
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper('.portfolio__container', {

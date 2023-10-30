@@ -103,15 +103,24 @@ html {
 }
 
 /*==================== NAV ====================*/
-.navbar {
+.header {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 6.25rem;
   background: #080808;
   box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.2);
   display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+.navbar {
+  position: relative;
+  width: 1400px;
+  height: 6.25rem;
+  background: #080808;
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   z-index: 1000;
 }
@@ -134,12 +143,23 @@ html {
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
-  padding-bottom: 2px;
-  border-bottom: 3px solid transparent;
+  position: relative;
 }
-.navbar__menu ul li:hover {
-  border-bottom: 3px solid #5e17eb;
+.navbar__menu ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  transform: translateY(0.6rem);
+  height: 0.3rem;
+  background: #5e17eb;
+  transition: all 0.5s ease;
 }
+.navbar__menu ul li:hover::after {
+  width: 100%;
+}
+
 .navbar__buttons ul {
   display: flex;
   flex-direction: row;
@@ -208,30 +228,37 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 800px;
+  width: 700px;
   justify-self: flex-end;
 }
 .home__container-left h1 {
   color: #fff;
   /* Ver la fuente */
   font-family: Segoe UI;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-style: normal;
   font-weight: 600;
   line-height: 6rem; /* 150% */
   text-align: start;
 }
+.typed {
+  width: 100px;
+}
 .home__title-animation {
-  position: relative;
+  display: inline-block;
+  width: 210px;
+  padding: 0 5px;
   border: #5e17eb 3px solid;
+  position: relative;
 }
 .home__title-decoration {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -7.5px;
+  right: -7.5px;
   background-color: #5e17eb;
-  height: 5px;
-  width: 5px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
 }
 .home__container-left p {
   color: #fff;
@@ -239,7 +266,7 @@ html {
   /* Ver la fuente */
 
   font-family: Segoe UI;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.25rem; /* 150% */
@@ -253,8 +280,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
+  align-items: flex-end;
+  width: 700px;
   background: #080808;
 }
 .home__container-right .home__background {
@@ -263,8 +290,7 @@ html {
   top: 1rem;
 }
 .hero__img {
-  width: 35.25rem;
-  height: 23.0625rem;
+  width: 30.25rem;
 }
 
 /*==================== SERVICES ====================*/
