@@ -68,32 +68,34 @@ html {
 }
 
 /* body {
-  margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+  PONER LA FUENTE PARA TODOS LOS ELEMENTOS
 } */
 
-/* .section {
+.section {
   padding: 2rem 0 4rem;
+  background-color: #080808;
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 6rem;
 }
 
 .section__title,
 .section__subtitle {
   text-align: center;
-} */
+}
+.background__blur {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 18rem;
+  background: #5e17eb;
+  filter: blur(180px);
+}
 
 /*==================== LAYOUT ====================*/
 .container {
@@ -216,13 +218,7 @@ html {
   position: relative;
   background: #080808;
 }
-.home__background {
-  width: 18rem;
-  height: 18rem;
-  border-radius: 18rem;
-  background: #5e17eb;
-  filter: blur(180px);
-}
+
 .home__container-left {
   display: flex;
   flex-direction: column;
@@ -294,257 +290,143 @@ html {
 }
 
 /*==================== SERVICES ====================*/
-
-.mobile,
-.mobile * {
-  box-sizing: border-box;
-}
-.mobile {
-  background: #121212;
-  padding: 48px 0px 48px 0px;
+.services {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
   position: relative;
 }
-.servicios {
-  background: linear-gradient(
-    245.29deg,
-    rgba(109, 193, 220, 1) 2.386939153075218%,
-    rgba(94, 23, 235, 1) 23.382370173931122%,
-    rgba(252, 150, 187, 1) 60.601967573165894%,
-    rgba(255, 195, 151, 1) 100%
-  );
-  text-align: left;
-  font: 500 24px/36px 'DM Sans', sans-serif;
-  position: relative;
-  width: 103px;
-  height: 32.34px;
-  -webkit-text-fill-color: transparent;
+
+.services h2 {
+  margin-bottom: 2rem;
 }
-.component-37 {
-  background: #121212;
-  padding: 12px 12px 12px 21px;
+.services__container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 393px;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
-.frame-3597 {
+.services__description {
+  width: 1200px;
   display: flex;
   flex-direction: row;
-  gap: 75px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
+  justify-content: space-between;
 }
-.frame-3595 {
+.services__left {
+  width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.services__left h2 {
+  text-align: left;
+}
+
+.services__right {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+.services__right p {
+  text-align: left;
+  color: #fff;
+  font-family: DM Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem; /* 150% */
+}
+.services__list {
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
+  color: #fff;
 }
-.ux-ui-desing {
-  background: linear-gradient(
-    245.29deg,
-    rgba(109, 193, 220, 1) 2.386939153075218%,
-    rgba(94, 23, 235, 1) 23.382370173931122%,
-    rgba(252, 150, 187, 1) 60.601967573165894%,
-    rgba(255, 195, 151, 1) 100%
-  );
-  text-align: left;
-  font: 500 20px/24px 'DM Sans', sans-serif;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.ellipse-304 {
-  background: #5e17eb;
-  border-radius: 50%;
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  position: relative;
-  cursor: pointer;
-}
-.frame-3596 {
+
+.services__list-container {
   display: flex;
-  flex-direction: column;
-  gap: 9px;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
+  width: 1400px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #fff;
 }
-.data-analytics {
-  color: #ffffff;
+.services__list-container h3 {
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 6rem; /* 150% */
+  width: 35%;
+}
+.services__list-container p {
   text-align: left;
-  font: 500 20px/24px 'DM Sans', sans-serif;
-  position: relative;
+  color: #fff;
+  font-family: DM Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem; /* 150% */
+  width: 45%;
 }
-.frame-3609 {
+.flecha {
+  color: red;
+}
+/*==================== ABOUT US ====================*/
+.about-us {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.about-us h2 {
+  margin-bottom: 2rem;
+}
+.about-us__container {
+  width: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-us__left {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
 }
-.frame-3608 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+.about-us__left h2 {
+  margin-bottom: 1.5rem;
 }
-.frame-110 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.ux-ui-design {
-  color: var(
-    --linear,
-    linear-gradient(
-      245.29deg,
-      rgba(109, 193, 220, 1) 2.386939153075218%,
-      rgba(94, 23, 235, 1) 23.382370173931122%,
-      rgba(252, 150, 187, 1) 60.601967573165894%,
-      rgba(255, 195, 151, 1) 100%
-    )
-  );
+.about-us__left p {
   text-align: left;
-  font: 500 20px/48px 'DM Sans', sans-serif;
-  position: relative;
+  color: #fff;
+  font-family: DM Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem; /* 150% */
 }
-.rectangle-10 {
-  background: #ffffff;
-  flex-shrink: 0;
-  width: 55px;
-  height: 7px;
-  position: relative;
+.subtitle__decoration {
+  color: #5e17eb;
 }
-.transformamos-ideas-en-soluciones-digitales-impactantes-a-trav-s-del-dise-o-ux-ui-creamos-aplicaciones-web-m-viles-o-de-escritorio-que-combinan-una-funcionalidad-excepcional-con-experiencias-atractivas-e-intuitivas-su-visi-n-cobra-vida-en-el-mundo-digital-con-nuestro-enfoque-hol-stico {
-  color: #ffffff;
-  text-align: left;
-  font: 400 16px/24px 'DM Sans', sans-serif;
-  position: relative;
-  width: 353px;
+.about-us__right {
+  margin-top: 2rem;
 }
-.frame-3607 {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.frame-107 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-end;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 350px;
-  position: relative;
-}
-.frame-106 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-}
-.frame-115 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.investigaci-n {
-  color: #f9a826;
-  text-align: left;
-  font: 500 20px/30px 'DM Sans', sans-serif;
-  position: relative;
-}
-.en-esta-primera-etapa-del-proceso-realizamos-entrevista-con-usuarios-encuestas-benchmarking-evaluaci-n-heur-stica-y-testeo-de-usabilidad {
-  color: #ffffff;
-  text-align: left;
-  font: 400 16px/24px 'DM Sans', sans-serif;
-  position: relative;
-  align-self: stretch;
-}
-.frame-117 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.dise-o-interactivo {
-  color: #f9a826;
-  text-align: left;
-  font: 500 20px/134.02% 'DM Sans', sans-serif;
-  position: relative;
-}
-.en-esta-etapa-nos-centramos-en-el-prototipado-user-persona-user-journey-y-wireframing {
-  color: #ffffff;
-  text-align: left;
-  font: 400 16px/24px 'DM Sans', sans-serif;
-  position: relative;
-  align-self: stretch;
-}
-.frame-108 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-end;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 350px;
-  position: relative;
-}
-.dise-o-visual {
-  color: #f9a826;
-  text-align: left;
-  font: 500 20px/134.02% 'DM Sans', sans-serif;
-  position: relative;
-}
-.para-completar-el-proceso-realizamos-el-dise-o-en-alta-fidelidad-dise-o-responsivo-y-sistema-de-dise-o {
-  color: #ffffff;
-  text-align: left;
-  font: 400 16px/24px 'DM Sans', sans-serif;
-  position: relative;
-  align-self: stretch;
+.about-us__background {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 /*==================== CONTACT ME ====================*/
