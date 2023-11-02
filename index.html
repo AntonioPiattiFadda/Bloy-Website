@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0YC5FT98W"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-E0YC5FT98W'); </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/assets/css/styles.css">
@@ -29,7 +30,7 @@
                     </div>
                     <div class="navbar__buttons">
                       <ul>
-                        <li><button>Contactanos</button></li>
+                        <li><button> <a href="#contact">Contactanos</a></button></li>
                         <li><button>ES</button></li>
                         <li><button>EN</button></li>
                       </ul>
@@ -64,7 +65,8 @@
                   <div class="services__description">
                     <img src="./assets/img/Lines right.svg" class="lines_rigth" alt="">
                     <div class="services__left">
-                      <h2 class="section__title">Que <br><span class="subtitle__decoration">servicios</span> estamos ofreciendo</h2>
+                      <h2 class="section__title">Que <span class="subtitle__decoration">servicios</span> <br>
+                        estamos ofreciendo</h2>
                           </div>
                     <div class="services__right">
                       <p>Ofrecemos servicios que ayudan a tu empresa a mejorar la visibilidad y la reputación de tu negocio, expandiendo el mercado e incrementando valor en los productos digitales.</p>
@@ -76,9 +78,9 @@
                       <div class="services__list-first">
                         <h3> UX/UI Design</h3>
                         <p>Transformamos ideas en soluciones digitales impactantes a través del diseño UX/UI. Creamos aplicaciones web, móviles o de escritorio que combinan una funcionalidad excepcional con experiencias atractivas e intuitivas. Su visión cobra vida en el mundo digital con nuestro enfoque holístico.</p>
-                        <img src="./assets//img/arrowDown.svg" alt="Arrow down">
+                        <img src="./assets//img/arrowDown.svg" alt="Arrow down" id="services__arrow-second">
                       </div>
-                      <div class="services__list-second">
+                      <div class="services__list-second" id="services__list-second">
                         <div>
                           <h4>Investigacion</h4>
                           <p>Es la base de toda solución de D&A, consiste en el desarrollo de una infraestructura de datos automatizada y escalable.</p>
@@ -98,9 +100,9 @@
                       <div class="services__list-first">
                        <h3> Data & Analytics</h3>
                        <p>Entendemos tus datos para convertirlos en información precisa y de valor en el momento adecuado. Queremos potenciar tu organización data-driven.</p> 
-                       <img class="flecha" src="./assets//img/arrowDown.svg" alt="Arrow down">
+                       <img class="flecha" src="./assets//img/arrowDown.svg" alt="Arrow down" id="services__arrow-first">
                        </div>
-                      <div class="services__list-second">
+                      <div class="services__list-second" id="services__list-first">
                         <div>
                           <h4>Ingenieria de datos</h4>
                           <p>Es la base de toda solución de D&A, consiste en el desarrollo de una infraestructura de datos automatizada y escalable.</p>
@@ -161,10 +163,41 @@
                   </div>
                  
                   <p>Comencemos a trabajar juntos.</p>
-                  <div class="contact__firstline--info">Contacto 634313.21</div>
-                  <div class="contact__firstline--info">Telefono 63453434</div>
+                  <div  class="contact__firstline--info">
+                    <div class="contact__firstline--mail">
+                      <p>Contacto</p> 
+                      <span>contacto@bloy.tech</span>
+                      <div class="contact__firstline--decoration"></div>
+                    </div>
+                    <div class="contact__firstline--phone">
+                      <p>Telefono</p> 
+                      <span>+54 348513070</span>
+                      <div class="contact__firstline--decoration"></div>
+                    </div>
+                  </div>
                 </div>
-                <form class="contact__form">Formulario</form>
+                <div class="contact__secondline">
+                  <form class="contact__form">
+                    <p>¿Con que podemos ayudarte?</p>
+                    <div class="contact__checkboxes">
+                      <div> 
+                        <input type="checkbox" name="" id="">
+                        <span>Data & Analytics</span>
+                      </div>
+                      <div>      
+                        <input type="checkbox" name="" id="">
+                        <span>UX/UI Designer</span>
+                      </div>
+                    </div>
+                    <label for="name">Nombre <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <input placeholder="Ingrese su nombre" class="contact__input--name" type="text" name="name" id="name">
+                    <label for="name">Correo electronico  <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <input placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email" id="email">
+                    <label for="name">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <textarea placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" id="message" cols="30" rows="10"></textarea>
+                    <button>Enviar</button>
+                  </form>
+                </div>
               </div>
               <div class="contact__background background__blur"></div>
                     <!-- <script type="text/javascript"

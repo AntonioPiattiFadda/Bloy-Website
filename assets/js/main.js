@@ -13,6 +13,15 @@ const typed = new Typed('.typed', {
   cursorChar: '_',
   contentType: 'html',
 });
+/*==================== SERVICES ANIMATION ====================*/
+const servicesList = document.querySelector('.services__list-second');
+const servicesIcon = document.querySelector('.flecha');
+
+function openServicesBar() {
+  servicesList.classList.toggle('crolled');
+}
+
+servicesIcon.addEventListener('click', openServicesBar);
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
@@ -44,25 +53,24 @@ function linkAction() {
 console.log(navLink);
 navLink.forEach((n) => n.addEventListener('click', linkAction));
 
-/*==================== ACCORDION SKILLS ====================*/
-const skillList = document.getElementById('skills__list');
-const skillsIcon = document.getElementById('skills__icon-down');
+/*==================== ACCORDION SKILLS  ====================*/
+
+const skillList = document.getElementById('services__list-first');
+const skillsIcon = document.getElementById('services__arrow-first');
 
 function openSkillsBar() {
-  skillList.classList.toggle('skills__list-open');
-  skillsIcon.classList.toggle('skills__icon-down-opened');
+  skillList.classList.toggle('services__list-second-open');
+  // skillsIcon.classList.toggle('skills__icon-down-opened');
 }
-/*==================== ACCORDION SKILLS 2 ====================*/
 skillsIcon.addEventListener('click', openSkillsBar);
-
-const skillList2 = document.getElementById('skills__list2');
-const skillsIcon2 = document.getElementById('skills__icon-down2');
+/*==================== ACCORDION SERVICES 2 ====================*/
+const skillList2 = document.getElementById('services__list-second');
+const skillsIcon2 = document.getElementById('services__arrow-second');
 
 function openSkillsBar2() {
-  skillList2.classList.toggle('skills__list-open2');
-  skillsIcon2.classList.toggle('skills__icon-down-opened');
+  skillList2.classList.toggle('services__list-second-open');
+  // skillsIcon.classList.toggle('skills__icon-down-opened');
 }
-
 skillsIcon2.addEventListener('click', openSkillsBar2);
 
 /*==================== SEND CONTACT INFORMATION ====================*/

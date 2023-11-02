@@ -116,7 +116,7 @@ html {
 
 /*==================== NAV ====================*/
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 6.25rem;
   background: #080808;
@@ -193,6 +193,10 @@ html {
   color: white;
   transition: all 0.8s ease-in-out;
 }
+.navbar__buttons ul li button a {
+  color: white;
+  text-decoration: none;
+}
 .navbar__buttons ul li button:hover {
   background: #5e17eb;
   border: 1px solid transparent;
@@ -222,7 +226,7 @@ html {
 
 /*==================== HOME ====================*/
 .home {
-  height: calc(90vh);
+  height: calc(100vh);
 }
 .home__container {
   height: calc(100vh - 6.25rem);
@@ -309,10 +313,12 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 18rem;
+  padding-top: 6.25rem;
 }
 
 .services h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .services__container {
   display: flex;
@@ -326,9 +332,10 @@ html {
   flex-direction: row;
   justify-content: center;
   position: relative;
+  margin-bottom: 8rem;
 }
 .services__left {
-  width: 700px;
+  width: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -339,7 +346,7 @@ html {
 }
 
 .services__right {
-  width: 700px;
+  width: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -396,15 +403,24 @@ html {
   line-height: 1.875rem; /* 150% */
   width: 45%;
 }
-.flecha {
-  color: red;
-}
 .services__list-second {
   width: 1400px;
+  height: 150px;
   display: flex;
   flex-direction: row;
-  padding-top: 2rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out,
+    padding 0.8s ease-in-out;
 }
+.services__list-second-open {
+  padding-top: 2rem;
+  max-height: 150px;
+  opacity: 1;
+}
+
 .services__list-second div {
   width: 33%;
   position: relative;
@@ -426,13 +442,14 @@ html {
 }
 .services__list-second div h4::after {
   content: '';
-  width: 3rem; /* Ancho del borde inferior */
-  height: 0.3rem; /* Grosor del borde inferior (ajusta según tus necesidades) */
-  background-color: #fff; /* Color del borde inferior */
-  position: absolute; /* Establece la posición absoluta */
-  top: 2.3rem; /* Lo coloca en la parte inferior del contenedor */
-  left: 0; /* Alinea el borde con el lado izquierdo del contenedor */
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #fff;
+  position: absolute;
+  top: 2.3rem;
+  left: 0;
 }
+
 /*==================== METODILOGY ====================*/
 .metodology {
   display: flex;
@@ -440,6 +457,8 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 18rem;
+  padding-top: 6.25rem;
 }
 .metodology__container {
   display: flex;
@@ -464,6 +483,8 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 18rem;
+  padding-top: 6.25rem;
 }
 .about-us h2 {
   margin-bottom: 2rem;
@@ -512,14 +533,18 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 18rem;
+  padding-top: 6.25rem;
+}
+.contact h2 {
+  padding-bottom: 6rem;
 }
 .contact__container {
   width: 1200px;
-  height: 800px;
   border: 1px solid #5e17eb;
   background: #121212;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
   padding: 2rem;
 }
 .contact__firstline {
@@ -535,6 +560,7 @@ html {
   gap: 0.625rem;
   background: #5e17eb;
   width: 380px;
+  margin-bottom: 2rem;
 }
 .contact__rectangle h4 {
   color: #fff;
@@ -553,16 +579,157 @@ html {
   line-height: 2.25rem; /* 150% */
 }
 .contact__firstline--info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5rem;
+}
+.contact__firstline--phone,
+.contact__firstline--mail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 150px;
+  position: relative;
+}
+.contact__firstline--info p {
   color: #fff;
-  align-self: flex-end;
+  font-family: Segoe UI;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.25rem; /* 150% */
+}
+.contact__firstline--info span {
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+}
+.contact__firstline--decoration {
+  position: absolute;
+  width: 1.3125rem;
+  height: 0.3125rem;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  right: -0.65625rem;
+}
+.contact__secondline {
+  display: flex;
+  justify-content: center;
 }
 .contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 500px;
+}
+.contact__form p {
+  color: #fff;
+  font-family: DM Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 120% */
+  margin-bottom: 1rem;
+}
+.contact__checkboxes {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+.contact__checkboxes div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 250px;
+}
+.contact__checkboxes div span {
+  color: #fff;
+  font-family: DM Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 150% */
+}
+label {
+  color: #fff;
+  font-family: Segoe UI;
+  width: 500px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem; /* 150% */
+  margin-bottom: 1rem;
+}
+.contact__obligatorio {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Segoe UI;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.contact__input--name,
+.contact__input--email {
+  background-color: transparent;
+  height: 2.5rem;
+  width: 500px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.contact__form input:focus {
+  outline: none;
+}
+
+.contact__form textarea {
+  color: #fff;
+  width: 500px;
+  font-family: Segoe UI;
+  border: 1px solid #fff;
+  resize: none;
+  background-color: transparent;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.contact__form button {
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  width: 7.1875rem;
+  height: 3rem;
+  padding: 0.625rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border: 1px solid #fff;
+  align-self: flex-end;
+  transition: all 0.8s ease-in-out;
+}
+.contact__form button:hover {
+  background-color: #5e17eb;
+  border: 1px solid transparent;
 }
 .contact__background {
   position: absolute;
   left: 1rem;
   top: 1rem;
 }
+
 /*==================== FOOTER ====================*/
 .footer__blur--line {
   width: 100vw;
@@ -652,6 +819,12 @@ html {
   top: 1rem;
 }
 
+/*==================== ANIMACIONES ====================*/
+.crolled {
+  height: 150px;
+  display: none;
+}
+
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -669,33 +842,6 @@ html {
 }
 
 /*NOTE - Ver si uso lo de abajo */
-/*========== SCROLL UP ==========*/
-/* .scroll__top {
-  position: fixed;
-  right: 5%;
-  bottom: -10%;
-  background-color: var(--first-color);
-  opacity: 0.8;
-  padding: 0 0.3rem;
-  border-radius: 0.4rem;
-  transition: 0.4s;
-  z-index: 1;
-}
-
-.scroll__top-icon {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.scroll__top:hover {
-  background-color: var(--first-color-alt);
-  transform: translateY(-1rem);
-}
-
-
-.show__scroll {
-  bottom: 10%;
-} */
 
 /*==================== MEDIA QUERIES ====================*/
 
