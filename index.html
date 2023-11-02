@@ -13,6 +13,7 @@
         <header class="header" id="header">
             <nav class="navbar">
                     <img class="logo" src="./assets/img/logo-1.png" /> 
+                    
                     <div class="navbar__menu">
                       <ul>
                         <li>
@@ -36,6 +37,33 @@
                         <li><button>EN</button></li>
                       </ul>
                     </div>
+
+                    <div class="navbar__menu--mobile"> 
+                      <div class="navbar__menu--list">
+                        <ul>
+                          <li>
+                            <a href="#home">Inicio</a>
+                            </li>
+                          <li>
+                            <a href="#services">Servicios</a>
+                            </li>
+                          <li>
+                            <a href="#metodology">Metodologia</a>
+                          </li>
+                          <li>
+                            <a href="#about-us">Sobre nosotros</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="navbar__buttons--mobile">
+                        <ul>
+                          <li><button> <a href="#contact">Contactanos</a></button></li>
+                          <li><button>ES</button></li>
+                          <li><button>EN</button></li>
+                        </ul>
+                      </div>
+                    </div>
+
                     <img class="navbar__menu-icon" src="./assets//img/menu-fill0-wght400-grad0-opsz24-1.svg" />
             </nav>
         </header>
@@ -57,14 +85,14 @@
             </section>
     
     
-            <section class="services section" id="services">
+            <section class="services section " id="services">
                   <h2 class="section__title">Nuestros servicios</h2>
                   <div class="services__container">
                     <img src="./assets/img/Lines left.svg" class="lines__left" alt="">
                   
 
                   <div class="services__description">
-                    <img src="./assets/img/Lines right.svg" class="lines_rigth" alt="">
+                    <img src="./assets/img/Lines right.svg" class="lines_rigth lines_rigth-services" alt="">
                     <div class="services__left">
                       <h2 class="section__title">Que <span class="subtitle__decoration">servicios</span> <br>
                         estamos ofreciendo</h2>
@@ -122,7 +150,7 @@
                   </div>
             </section>
 
-            <section class="metodology section" id="metodology">
+            <section class="metodology section " id="metodology">
               <h2 class="section__title">Nuestra metodologia de trabajo</h2>
               <p>Aplicamos Agile, Design Thinking y Lean para llevar a cabo nuestro trabajo.</p>
               <div class="metodology__container">
@@ -131,13 +159,13 @@
               </div>
           </section>
     
-            <section class="about-us section" id="about-us">
+            <section class="about-us section " id="about-us">
               <h2 class="section__title">Sobre nosotros</h2>
               <img src="./assets/img/Lines left.svg" class="lines__left" alt="">
               <img src="./assets/img/Lines right.svg" class="lines_rigth" alt="">
               <div class="about-us__container">
                 <div class="about-us__left">
-                  <h2 class="section__title">Que nos <br><span class="subtitle__decoration">impulsa</span>.</h2>
+                  <h2 class="section__title">Que nos <br class="about-us__br"><span class="subtitle__decoration">impulsa</span>.</h2>
                   <p>Nos propusimos ayudar a las empresas desde dos perspectivas, la primera democratizar la información y convertirlas en data-driven para obtener mejores resultados.
                     <br>
                     La segunda busca mejorar la experiencia de los usuarios con los productos digitales y dar a conocer la importancia que tiene la misma para generar un uso fácil e intuitivo de las aplicaciones.
@@ -212,12 +240,12 @@
         </main>
     
     
-        <footer class="footer">              
+        <footer class="footer section">              
           <div class="footer__blur--line">
           </div>
           <div class="footer__container">
             <div class="footer__firstLine">
-              <img src="./assets//img/BloyIcon.svg" alt="">
+              <img class="footer__bloy--icon" src="./assets//img/BloyIcon.svg" alt="">
               <div class="footer__firstLine--redes">
                 <div>
                   <h4>BLOY</h4>

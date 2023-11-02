@@ -13,15 +13,6 @@ const typed = new Typed('.typed', {
   cursorChar: '_',
   contentType: 'html',
 });
-/*==================== SERVICES ANIMATION ====================*/
-const servicesList = document.querySelector('.services__list-second');
-const servicesIcon = document.querySelector('.flecha');
-
-function openServicesBar() {
-  servicesList.classList.toggle('crolled');
-}
-
-servicesIcon.addEventListener('click', openServicesBar);
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
