@@ -16,20 +16,14 @@ const typed = new Typed('.typed', {
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
-  navToogle = document.getElementById('nav-toogle'),
-  navClose = document.getElementById('nav-close');
+  navToogle = document.getElementById('nav-toogle');
 
-/*===== MENU SHOW =====*/
+/*===== MENU TOGGLE =====*/
 if (navToogle) {
   navToogle.addEventListener('click', () => {
-    navMenu.classList.add('show-menu');
-  });
-}
-
-/*===== MENU HIDDEN =====*/
-if (navClose) {
-  navClose.addEventListener('click', () => {
-    navMenu.classList.remove('show-menu');
+    navMenu.classList.toggle('show-menu');
+    navToogle.classList.toggle('show-menu-icon');
+    //NOTE - Agregar clase para que cambie el background svg
   });
 }
 
@@ -38,8 +32,8 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
   const navMenu = document.getElementById('nav-menu');
-  // When we click on each nav__link, we remove the show-menu class
   navMenu.classList.remove('show-menu');
+  navToogle.classList.remove('show-menu-icon');
 }
 console.log(navLink);
 navLink.forEach((n) => n.addEventListener('click', linkAction));
@@ -51,6 +45,7 @@ const skillsIcon = document.getElementById('services__arrow-first');
 
 function openSkillsBar() {
   skillList.classList.toggle('services__list-second-open');
+  skillsIcon.classList.toogle('services__arrow-first-up');
   // skillsIcon.classList.toggle('skills__icon-down-opened');
 }
 skillsIcon.addEventListener('click', openSkillsBar);
@@ -74,15 +69,15 @@ document.getElementById('form').addEventListener('submit', function (event) {
   btn.classList.add('cargando');
 
   const serviceID = 'default_service';
-  const templateID = 'template_bh65hvn';
+  const templateID = 'template_yfoa119';
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
       btn.classList.remove('cargando');
-      alert('Message sent correctly!');
+      alert('Sent!');
     },
     (err) => {
-      btn.classList.remove('cargando');
+      btn.value = 'Send Email';
       alert(JSON.stringify(err));
     }
   );
@@ -118,4 +113,42 @@ languageToggle.addEventListener('click', function () {
       ? 'Hello, welcome to my page.'
       : 'Hola, bienvenido a mi página.';
   languageToggle.classList.toggle('active');
+});
+
+/*==================== TRADUCCION CAMBIO BACKGROUND ====================*/
+const esButtons = document.querySelectorAll('.traductionBtn-es');
+const enButtons = document.querySelectorAll('.traductionBtn-en');
+
+// Función para quitar la clase seleccionada de todos los botones de una clase
+function removeSelectedClass(buttons) {
+  buttons.forEach((button) => {
+    button.classList.remove('navbar__language--selected');
+  });
+}
+
+function handleEsButtonClick() {
+  alert('toque el boton');
+  enButtons.forEach((button) => {
+    button.classList.remove('navbar__language--selected');
+  });
+  esButtons.forEach((button) => {
+    button.classList.add('navbar__language--selected');
+  });
+}
+
+function handleEnButtonClick() {
+  esButtons.forEach((button) => {
+    button.classList.remove('navbar__language--selected');
+  });
+  enButtons.forEach((button) => {
+    button.classList.add('navbar__language--selected');
+  });
+}
+
+esButtons.forEach((button) => {
+  button.addEventListener('click', handleEsButtonClick);
+});
+
+enButtons.forEach((button) => {
+  button.addEventListener('click', handleEnButtonClick);
 });

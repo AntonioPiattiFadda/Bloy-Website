@@ -48,6 +48,11 @@ body {
   bottom: 1rem;
 }
 
+.metodology__svg--mobile1,
+.metodology__svg--mobile2 {
+  display: none;
+}
+
 /*==================== LAYOUT ====================*/
 .container {
   max-width: 768px;
@@ -128,7 +133,7 @@ body {
 .navbar__buttons ul li {
   color: white;
 }
-.navbar__buttons ul li button {
+.navbar__menu--button {
   height: 3rem;
   padding: 0.625rem 0.75rem;
   gap: 0.625rem;
@@ -137,35 +142,22 @@ body {
   color: white;
   transition: all 0.8s ease-in-out;
 }
-.navbar__buttons ul li button a {
+.navbar__menu--button a {
   color: white;
   text-decoration: none;
 }
-.navbar__buttons ul li button:hover {
+.navbar__menu--button:hover {
   background: #5e17eb;
   border: 1px solid transparent;
 }
-
+.navbar__languague--selected {
+  background: #5e17eb;
+  border: 1px solid transparent;
+}
 .navbar .navbar__menu-icon {
+  display: none;
   width: 24px;
   height: 24px;
-}
-
-@media screen and (min-width: 767px) {
-  .navbar__menu-icon {
-    display: none;
-  }
-}
-
-/* Estas cosas no las use en esta web */
-/* Active link */
-.active-link {
-  color: var(--first-color);
-}
-
-/* Change background header */
-.scroll__header {
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*==================== HOME ====================*/
@@ -347,6 +339,7 @@ body {
   line-height: 1.875rem; /* 150% */
   width: 45%;
 }
+
 .services__list-second {
   width: 1400px;
   height: 150px;
@@ -363,6 +356,12 @@ body {
   padding-top: 2rem;
   max-height: 150px;
   opacity: 1;
+  background-image: url('../img/arrow_down_hover.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services__list-second-open:hover {
+  background-image: url('../img/arrowDown.svg');
 }
 
 .services__list-second div {
@@ -390,8 +389,34 @@ body {
   height: 0.3rem;
   background-color: #fff;
   position: absolute;
-  top: 2.3rem;
+  top: 2.8rem;
   left: 0;
+}
+
+/* SERVICES ANIMATION  */
+
+.services__arrow-first,
+.services__arrow-second {
+  width: 100px;
+  height: 100px;
+  transition: all 0.3s ease-in-out;
+  background-image: url('../img/arrowDown.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services__arrow-first:hover,
+.services__arrow-second:hover {
+  background-image: url('../img/arrow_down_hover.svg');
+}
+
+.services__list-second-open {
+  background-image: url('../img/arrow_down_hover.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services__list-second-open:hover {
+  background-image: url('../img/arrowDown.svg');
 }
 
 @media screen and (max-width: 350px) {
@@ -495,7 +520,7 @@ body {
   align-items: center;
   width: 1400px;
 }
-.metodology__container img {
+.metodology__svg--web {
   width: 1400px;
 }
 .metodology__background {
@@ -587,7 +612,7 @@ body {
 .contact__rectangle {
   display: flex;
   padding: 0.75rem 1.5rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.625rem;
   background: #5e17eb;
@@ -595,6 +620,7 @@ body {
   margin-bottom: 2rem;
 }
 .contact__rectangle h4 {
+  text-align: start;
   color: #fff;
   font-family: Segoe UI;
   font-size: 2rem;
@@ -855,43 +881,6 @@ label {
 }
 
 @media screen and (max-width: 500px) {
-  .footer {
-    padding: 0;
-  }
-  .footer__firstLine {
-    flex-direction: column;
-    width: 300px;
-  }
-  .footer__bloy--icon {
-    width: 7.3125rem;
-    height: 9.0445rem;
-  }
-  .footer__firstLine--redes {
-    width: 300px;
-  }
-  .footer__firstLine--redes div h4 {
-    font-size: 1rem;
-  }
-
-  .footer__firstLine--redes div ul li {
-    font-size: 0.8rem;
-  }
-  .footer__firstLine--redes div ul li a {
-    font-size: 0.8rem;
-  }
-  .footer__firstLine--thirdblock {
-    display: none;
-  }
-  .footer__contact--icons {
-  }
-  .footer__copyright {
-    padding: 0;
-
-    color: #fff;
-  }
-  .footer__background {
-    display: none;
-  }
 }
 
 /*========== SCROLL BAR ==========*/
@@ -913,10 +902,9 @@ label {
 /*==================== MEDIA QUERIES ====================*/
 
 @media screen and (max-width: 500px) {
-  .metodology {
-    display: none;
+  .section {
+    padding: 1rem 0 2rem;
   }
-
   .section__title {
     font-size: 2rem;
   }
@@ -930,8 +918,115 @@ label {
   .navbar__buttons {
     display: none;
   }
-  .navbar__menu-icon {
+  .navbar .navbar__menu-icon {
     display: block;
+    width: 3rem;
+    padding: 0.5rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+  /* Navbar Mobile */
+  .navbar__menu--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #080808;
+    position: absolute;
+    top: 6.25rem;
+    width: 100vw;
+    height: 0vh;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+  }
+  .show-menu {
+    height: 100vh;
+  }
+  .navbar__menu-icon {
+    background-image: url('../img/menu-fill0-wght400-grad0-opsz24-1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+  }
+  .show-menu-icon {
+    background-image: url('../img/CloseMenuIcon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .navbar__menu--mobile .navbar__menu--list ul {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    list-style-type: none;
+  }
+  .navbar__menu--list ul li {
+    cursor: pointer;
+    position: relative;
+  }
+  .navbar__menu--list ul li a {
+    color: #fff;
+    /* Ver la font */
+    font-family: Segoe UI;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .navbar__menu--list ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transform: translateY(0.6rem);
+    height: 0.3rem;
+    background: #5e17eb;
+    transition: all 0.5s ease;
+  }
+  .navbar__menu--list ul li:hover::after {
+    width: 100%;
+  }
+
+  .navbar__buttons--mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+  }
+  .navbar__buttons--mobile ul li {
+    color: white;
+  }
+  .navbar__buttons--mobile ul li button {
+    height: 3rem;
+    padding: 0.625rem 0.75rem;
+    gap: 0.625rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+    transition: all 0.8s ease-in-out;
+  }
+  .navbar__buttons--contact {
+    width: 11.75rem;
+  }
+  .navbar__buttons--mobile ul li button a {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar__buttons--mobile ul li button:hover {
+    background: #5e17eb;
+    border: 1px solid transparent;
+  }
+  .navbar__buttons--lang {
+    width: 11.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
   }
 
   .home__container {
@@ -997,6 +1092,38 @@ label {
   .services__list-container {
     /* Tengo que rediseñar los servicios para mobile */
     display: none;
+  }
+  .metodology {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  .metodology p {
+    width: 300px;
+    text-align: center;
+  }
+  .metodology__container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+  .metodology__svg--web {
+    display: none;
+  }
+  .metodology__svg--mobile1,
+  .metodology__svg--mobile2 {
+    display: block;
+  }
+  .agile {
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3rem; /* 150% */
+    letter-spacing: 0.6rem;
+    color: white;
   }
 
   .about-us {
@@ -1084,7 +1211,8 @@ label {
     height: 1.3125rem;
     width: 0.3125rem;
     left: 50%;
-    bottom: -0.65625rem;
+    bottom: -1.25625rem;
+    top: auto;
   }
   .contact__secondline {
     padding-top: 2rem;
@@ -1124,6 +1252,43 @@ label {
     position: absolute;
     left: 1rem;
     top: 1rem;
+  }
+
+  .footer {
+    padding: 0;
+  }
+  .footer__firstLine {
+    flex-direction: column;
+    width: 300px;
+  }
+  .footer__bloy--icon {
+    width: 7.3125rem;
+    height: 9.0445rem;
+  }
+  .footer__firstLine--redes {
+    width: 350px;
+  }
+  .footer__firstLine--redes div h4 {
+    font-size: 1rem;
+  }
+
+  .footer__firstLine--redes div ul li {
+    font-size: 0.8rem;
+  }
+  .footer__firstLine--redes div ul li a {
+    font-size: 0.8rem;
+  }
+  .footer__firstLine--thirdblock {
+    display: none;
+  }
+
+  .footer__copyright {
+    padding: 0;
+
+    color: #fff;
+  }
+  .footer__background {
+    display: none;
   }
 }
 /* @media screen and (max-width: 568px) {
