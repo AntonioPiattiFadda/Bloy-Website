@@ -75,7 +75,7 @@
         </header>
     
         <main class="main">
-            <section class="home section" id="home">
+            <section class="hoenvime section" id="home">
                 <div class="home__container">
                     <div class="home__container-left">
                     
@@ -158,17 +158,18 @@
             </section>
 
             <section class="metodology section " id="metodology">
-              <h2 class="section__title">Nuestra metodologia de trabajo</h2>
-              <p>Aplicamos Agile, Design Thinking y Lean para llevar a cabo nuestro trabajo.</p>
+              <h2 data-section="metodology_data" data-value="metodology_title" class="section__title">Nuestra metodologia de trabajo</h2>
+              <p class="metodology__subtitle" data-section="metodology_data" data-value="metodology_subtitle">Aplicamos Agile, Design Thinking y Lean <br> para llevar a cabo nuestro trabajo.</p>
               <div class="metodology__container">
                 <img class="metodology__svg--mobile2 " src="./assets/img/AgileLeanDesignThinkingGraphic.png" alt="">
                 <div>
-                  <img class="metodology__svg--mobile2 " src="./assets/img/AGILE-es.svg" alt="">
-                  <img class="metodology__svg--mobile2 " src="./assets/img/DES_THIN-es.svg" alt="">
-                   <img class="metodology__svg--mobile2 " src="./assets/img/LEAN-es.svg" alt="">
+                  <img id="metodology_mobile1--es" class="metodology__svg--mobile2 " src="./assets/img/AGILE-es.svg" alt="">
+                  <img id="metodology_mobile2--es" class="metodology__svg--mobile2 " src="./assets/img/DES_THIN-es.svg" alt="">
+                   <img id="metodology_mobile3--es" class="metodology__svg--mobile2 " src="./assets/img/LEAN-es.svg" alt="">
+                   <img id="metodology_mobile1--en" class="metodology__svg--mobile2 " src="./assets/img/Agile-Design-en--mobile.svg" alt="">
                  </div>
                 <img id="metodology__id--es" class="metodology__svg--web" src="./assets/img/AgileLeanDesignThinking.svg" alt="">
-                <img class="disabled" id="metodology__id--en" class="metodology__svg--web" src="./assets/img/metodology_section_en.svg" alt="">
+                <img id="metodology__id--en" class="metodology__svg--web disabled" src="./assets/img/metodology_section_en.svg" alt="">
 
                 <div class="metodology__background background__blur"></div>
               </div>
@@ -235,12 +236,12 @@
                       </div>
                     </div>
                     <label data-section="contact_data" data-value="contact_form--name" for="name">Nombre <span class="contact__obligatorio">(Obligatorio)</span></label>
-                    <input placeholder="Ingrese su nombre" class="contact__input--name" type="text" name="name" id="name">
+                    <input id="name__input" placeholder="Ingrese su nombre" class="contact__input--name" type="text" name="name" id="name">
                     <label data-section="contact_data" data-value="contact_form--email" for="name">Correo electronico  <span class="contact__obligatorio">(Obligatorio)</span></label>
-                    <input placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email" id="email">
+                    <input id="email__input" placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email" id="email">
                     <label data-section="contact_data" data-value="contact_form--message" for="name">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
-                    <textarea placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" id="message" cols="30" rows="10"></textarea>
-                    <button data-section="contact_data" data-value="contact_form--button" value="Enviar" id="button">Enviar</button>
+                    <textarea  id="message__input" placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" id="message" cols="30" rows="10"></textarea>
+                    <button class="contact__form--button" data-section="contact_data" data-value="contact_form--button" value="Enviar" id="button"></button>
                   </form>
                 </div>
               </div>

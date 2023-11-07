@@ -26,7 +26,10 @@
     "services_description--Vdata": "Visualización de datos",
     "services_description--Vdata--text": "La elegancia de los datos, presentados de una forma atractiva y clara en el momento adecuado mediante dashboards."
   },
-
+  "metodology_data": {
+    "metodology_title": "Nuestra metodologia de trabajo",
+    "metodology_subtitle": "Aplicamos Agile, Design Thinking y Lean  <br> para llevar a cabo nuestro trabajo."
+  },
   "about_data": {
     "about_title": "Sobre nosotros",
     "about_subtitle": "Que nos <br class='about-us__br'><span class='subtitle__decoration'>impulsa</span>.",

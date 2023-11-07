@@ -37,7 +37,6 @@ if (navToogle) {
   navToogle.addEventListener('click', () => {
     navMenu.classList.toggle('show-menu');
     navToogle.classList.toggle('show-menu-icon');
-    //NOTE - Agregar clase para que cambie el background svg
   });
 }
 
@@ -49,7 +48,6 @@ function linkAction() {
   navMenu.classList.remove('show-menu');
   navToogle.classList.remove('show-menu-icon');
 }
-console.log(navLink);
 navLink.forEach((n) => n.addEventListener('click', linkAction));
 
 /*==================== ACCORDION SKILLS  ====================*/
@@ -84,7 +82,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
   btn.classList.add('cargando');
 
   const serviceID = 'default_service';
-  const templateID = 'template_jlzyxin';
+  const templateID = 'template_jlzyxinXXX';
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
@@ -92,6 +90,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
       alert('Sent!');
     },
     (err) => {
+      btn.classList.remove('cargando');
       btn.value = 'Send Email';
       alert('Error!');
     }
@@ -102,12 +101,24 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
 const traductionBtn = document.getElementsByClassName('traductionBtn');
 const textsToChange = document.querySelectorAll('[data-section]');
+
 const esTitle = document.getElementById('home_titleEs');
 const enTitle = document.getElementById('home_titleEn');
+
 const esMetogology = document.getElementById('metodology__id--es');
 const enMetogology = document.getElementById('metodology__id--en');
+
 const esAboutBloy = document.getElementById('about__bloy--es');
 const enAboutBloy = document.getElementById('about__bloy--en');
+
+const nameInput = document.getElementById('name__input');
+const emailInput = document.getElementById('email__input');
+const messageInput = document.getElementById('message__input');
+
+const metodologyImageEs1 = document.getElementById('metodology_mobile1--es');
+const metodologyImageEs2 = document.getElementById('metodology_mobile2--es');
+const metodologyImageEs3 = document.getElementById('metodology_mobile3--es');
+const metodologyImageEn = document.getElementById('metodology_mobile--en');
 
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
@@ -140,6 +151,15 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       esAboutBloy.classList.remove('disabled');
       enAboutBloy.classList.add('disabled');
+
+      nameInput.placeholder = 'Ingrese su nombre';
+      emailInput.placeholder = 'Ingrese su email';
+      messageInput.placeholder = 'Ingrese su mensaje';
+
+      metodologyImageEs1.classList.remove('disabled');
+      metodologyImageEs2.classList.remove('disabled');
+      metodologyImageEs3.classList.remove('disabled');
+      metodologyImageEn.classList.add('disabled');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -155,6 +175,15 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       enAboutBloy.classList.remove('disabled');
       esAboutBloy.classList.add('disabled');
+
+      nameInput.placeholder = 'Enter your name';
+      emailInput.placeholder = 'Enter your email';
+      messageInput.placeholder = 'Enter your message';
+
+      metodologyImageEs1.classList.add('disabled');
+      metodologyImageEs2.classList.add('disabled');
+      metodologyImageEs3.classList.add('disabled');
+      metodologyImageEn.classList.remove('disabled');
     }
   });
 }
