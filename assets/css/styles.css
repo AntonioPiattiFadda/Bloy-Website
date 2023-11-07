@@ -141,6 +141,7 @@ body {
   border: 1px solid #fff;
   color: white;
   transition: all 0.8s ease-in-out;
+  cursor: pointer;
 }
 .navbar__menu--button a {
   color: white;
@@ -158,6 +159,9 @@ body {
   display: none;
   width: 24px;
   height: 24px;
+}
+.navbar__languague--selected {
+  background-color: #5e17eb;
 }
 
 /*==================== HOME ====================*/
@@ -356,12 +360,6 @@ body {
   padding-top: 2rem;
   max-height: 150px;
   opacity: 1;
-  background-image: url('../img/arrow_down_hover.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.services__list-second-open:hover {
-  background-image: url('../img/arrowDown.svg');
 }
 
 .services__list-second div {
@@ -393,13 +391,11 @@ body {
   left: 0;
 }
 
-/* SERVICES ANIMATION  */
-
 .services__arrow-first,
 .services__arrow-second {
   width: 100px;
   height: 100px;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   background-image: url('../img/arrowDown.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -410,16 +406,21 @@ body {
   background-image: url('../img/arrow_down_hover.svg');
 }
 
-.services__list-second-open {
-  background-image: url('../img/arrow_down_hover.svg');
+.services__arrow-first-up,
+.services__arrow-second-up {
+  background-image: url('../img/arrowDown.svg');
   background-repeat: no-repeat;
   background-position: center;
-}
-.services__list-second-open:hover {
-  background-image: url('../img/arrowDown.svg');
+  transform: rotate(180deg);
 }
 
-@media screen and (max-width: 350px) {
+.services__arrow-first-up:hover,
+.services__arrow-second-up:hover {
+  background-image: url('../img/arrow_down_hover.svg');
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 500px) {
   .section__title {
     font-size: 2rem;
   }
@@ -496,10 +497,6 @@ body {
   }
   .lines_rigth-services {
     bottom: -6rem;
-  }
-  .services__list-container {
-    /* Tengo que rediseñar los servicios para mobile */
-    display: none;
   }
 }
 
@@ -1089,9 +1086,32 @@ label {
   .lines_rigth-services {
     bottom: -6rem;
   }
+  .services__list {
+    width: 350px;
+  }
+  .services__list-first {
+    width: 350px;
+    justify-content: space-around;
+  }
+  .services__list-first h3 {
+    font-size: 1.5rem;
+    width: 200px;
+  }
   .services__list-container {
-    /* Tengo que rediseñar los servicios para mobile */
-    display: none;
+    width: 350px;
+  }
+  .services__list-second {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+  }
+  .services__list-second div {
+    width: 100%;
+  }
+  .services__list-second-open {
+    /*FIXME - Tengo que rediseñar los servicios para mobile */
+
+    height: 800px;
   }
   .metodology {
     display: flex;
@@ -1114,6 +1134,8 @@ label {
   .metodology__svg--mobile1,
   .metodology__svg--mobile2 {
     display: block;
+    width: 350px;
+    margin-top: 1rem;
   }
   .agile {
     text-align: center;
@@ -1302,6 +1324,7 @@ label {
 
 @media screen and (min-width: 1024px) {
 } */
-.mobile {
+
+.disabled {
   display: none;
 }

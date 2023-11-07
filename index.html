@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="icon" type="image/png" href="./assets/img/favicon.png" >
         <title>Bloy Website</title>
     </head>
     
@@ -78,7 +79,8 @@
                 <div class="home__container">
                     <div class="home__container-left">
                     
-                      <h1 data-section="home_data" data-value="home_title" >Transformacion <span class="home__title-animation"><span class="typed"></span> <div class="home__title-decoration"></div></span> <br> para tu negocio</h1>
+                      <h1  id="home_titleEs" >Transformacion <span class="home__title-animation"><span class="typedEs"></span> <div class="home__title-decoration"></div></span> <br> para tu negocio</h1>
+                      <h1 class="disabled" id="home_titleEn" ><span class='home__title-animation'><span class='typedEn'></span> <div class='home__title-decoration'></div></span> Transformation <br> for your business</h1>
                       <p data-section="home_data" data-value="home_subtitle">Convertimos tus ideas en realidad</p>
                       <div class="home__background background__blur"></div>
                     </div>
@@ -90,7 +92,7 @@
             </section>
     
     
-            <section class="services section " id="services">
+            <section class="services section" id="services">
                   <h2 data-section="services_data" data-value="services_title" class="section__title">Nuestros servicios</h2>
                   <div class="services__container">
                     <img src="./assets/img/Lines left.svg" class="lines__left" alt="">
@@ -111,7 +113,7 @@
                     <div class="services__list-container">
                       <div class="services__list-first">
                         <h3> UX/UI Design</h3>
-                        <p data-section="services_data" data-value="services_description--ux">Transformamos ideas en soluciones digitales impactantes a través del diseño UX/UI. Creamos aplicaciones web, móviles o de escritorio que combinan una funcionalidad excepcional con experiencias atractivas e intuitivas. Su visión cobra vida en el mundo digital con nuestro enfoque holístico.</p>
+                        <!-- <p data-section="services_data" data-value="services_description--ux">Transformamos ideas en soluciones digitales impactantes a través del diseño UX/UI. Creamos aplicaciones web, móviles o de escritorio que combinan una funcionalidad excepcional con experiencias atractivas e intuitivas. Su visión cobra vida en el mundo digital con nuestro enfoque holístico.</p> -->
                         <span class="services__arrow-second" id="services__arrow-second">
                       </div>
                       <div class="services__list-second" id="services__list-second">
@@ -133,7 +135,7 @@
                     <div class="services__list-container">
                       <div class="services__list-first">
                        <h3 > Data & Analytics</h3>
-                       <p data-section="services_data" data-value="services_description--data">Entendemos tus datos para convertirlos en información precisa y de valor en el momento adecuado. Queremos potenciar tu organización data-driven.</p> 
+                       <!-- <p data-section="services_data" data-value="services_description--data">Entendemos tus datos para convertirlos en información precisa y de valor en el momento adecuado. Queremos potenciar tu organización data-driven.</p>  -->
                        <span class="services__arrow-first" id="services__arrow-first"></span>
                        </div>
                       <div class="services__list-second" id="services__list-first">
@@ -161,12 +163,13 @@
               <div class="metodology__container">
                 <img class="metodology__svg--mobile2 " src="./assets/img/AgileLeanDesignThinkingGraphic.png" alt="">
                 <div>
-                  <span class="agile">AGILE</span>
-                  <!-- <img class="metodology__svg--mobile2 " src="./assets/img/AGILE.png" alt=""> -->
-                  <!-- <img class="metodology__svg--mobile2 " src="./assets/img/DESIGN-THINKING.png" alt="">
-                   <img class="metodology__svg--mobile2 " src="./assets/img/LEAN.png" alt=""> -->
+                  <img class="metodology__svg--mobile2 " src="./assets/img/AGILE-es.svg" alt="">
+                  <img class="metodology__svg--mobile2 " src="./assets/img/DES_THIN-es.svg" alt="">
+                   <img class="metodology__svg--mobile2 " src="./assets/img/LEAN-es.svg" alt="">
                  </div>
-                <img class="metodology__svg--web " src="./assets/img/AgileLeanDesignThinking.svg" alt="">
+                <img id="metodology__id--es" class="metodology__svg--web" src="./assets/img/AgileLeanDesignThinking.svg" alt="">
+                <img class="disabled" id="metodology__id--en" class="metodology__svg--web" src="./assets/img/metodology_section_en.svg" alt="">
+
                 <div class="metodology__background background__blur"></div>
               </div>
           </section>
@@ -186,7 +189,8 @@
                     </p>
                 </div>
                 <div class="about-us__right">
-                  <img src="./assets/img/Frame 172.png" alt="">
+                  <img class="disabled" id="about__bloy--en" src="./assets/img/bloy_about.svg" alt="">
+                  <img id="about__bloy--es" src="./assets/img/Frame 172.png" alt="">
                   <div class="about-us__background background__blur"></div>
                 </div>
               </div>
@@ -241,12 +245,12 @@
                 </div>
               </div>
               <div class="contact__background background__blur"></div>
-                  <script type="text/javascript"
-                  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-                
-                 <script type="text/javascript">
-                  emailjs.init('IaMc4iJjKGzwJiTw8')
-                 </script>
+                    <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                  
+                  <script type="text/javascript">
+                    emailjs.init('TmZCI0esJD2MTphKV')
+                  </script> 
                 </div>
             </section>
         </main>

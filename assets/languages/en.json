@@ -7,7 +7,6 @@
     "nav_contact": "Contact us"
   },
   "home_data": {
-    "home_title": "<span class='home__title-animation'><span class='typed'></span> <div class='home__title-decoration'></div></span> <br> Transformation for your business",
     "home_subtitle": "We turn your ideas into reality."
   },
   "services_data": {

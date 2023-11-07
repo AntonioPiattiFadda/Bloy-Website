@@ -1,6 +1,20 @@
 /*==================== HERO TITLE ANIMATION ====================*/
-const typed = new Typed('.typed', {
+const typed = new Typed('.typedEs', {
   strings: ['Digital', 'Agil', 'Eficaz'],
+  typeSpeed: 300,
+  startDelay: 300,
+  backSpeed: 75,
+  smartBackspace: true,
+  shuffle: false,
+  backDelay: 1500,
+  loop: true,
+  loopCount: false,
+  showCursor: true,
+  cursorChar: '_',
+  contentType: 'html',
+});
+const typed2 = new Typed('.typedEn', {
+  strings: ['Digital', 'Agile', 'Eficaz'],
   typeSpeed: 300,
   startDelay: 300,
   backSpeed: 75,
@@ -45,7 +59,7 @@ const skillsIcon = document.getElementById('services__arrow-first');
 
 function openSkillsBar() {
   skillList.classList.toggle('services__list-second-open');
-  skillsIcon.classList.toogle('services__arrow-first-up');
+  skillsIcon.classList.toggle('services__arrow-first-up');
   // skillsIcon.classList.toggle('skills__icon-down-opened');
 }
 skillsIcon.addEventListener('click', openSkillsBar);
@@ -55,6 +69,7 @@ const skillsIcon2 = document.getElementById('services__arrow-second');
 
 function openSkillsBar2() {
   skillList2.classList.toggle('services__list-second-open');
+  skillsIcon2.classList.toggle('services__arrow-second-up');
   // skillsIcon.classList.toggle('skills__icon-down-opened');
 }
 skillsIcon2.addEventListener('click', openSkillsBar2);
@@ -69,7 +84,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
   btn.classList.add('cargando');
 
   const serviceID = 'default_service';
-  const templateID = 'template_yfoa119';
+  const templateID = 'template_jlzyxinXXXX';
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
@@ -78,7 +93,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     },
     (err) => {
       btn.value = 'Send Email';
-      alert(JSON.stringify(err));
+      alert('Error!');
     }
   );
 });
@@ -87,6 +102,12 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
 const traductionBtn = document.getElementsByClassName('traductionBtn');
 const textsToChange = document.querySelectorAll('[data-section]');
+const esTitle = document.getElementById('home_titleEs');
+const enTitle = document.getElementById('home_titleEn');
+const esMetogology = document.getElementById('metodology__id--es');
+const enMetogology = document.getElementById('metodology__id--en');
+const esAboutBloy = document.getElementById('about__bloy--es');
+const enAboutBloy = document.getElementById('about__bloy--en');
 
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
@@ -100,7 +121,41 @@ const changeLanguage = async (language) => {
 
 for (let i = 0; i < traductionBtn.length; i++) {
   traductionBtn[i].addEventListener('click', (e) => {
-    changeLanguage(e.target.dataset.language);
+    let language = e.target.dataset.language;
+    changeLanguage(language);
+    const esButtons = document.querySelectorAll('[data-language="es"]');
+    const enButtons = document.querySelectorAll('[data-language="en"]');
+    if (language === 'es') {
+      for (const esButton of esButtons) {
+        esButton.classList.add('navbar__languague--selected');
+        for (const enButton of enButtons) {
+          enButton.classList.remove('navbar__languague--selected');
+        }
+      }
+      enTitle.classList.add('disabled');
+      esTitle.classList.remove('disabled');
+
+      esMetogology.classList.remove('disabled');
+      enMetogology.classList.add('disabled');
+
+      esAboutBloy.classList.remove('disabled');
+      enAboutBloy.classList.add('disabled');
+    } else {
+      for (const enButton of enButtons) {
+        enButton.classList.add('navbar__languague--selected');
+        for (const esButton of esButtons) {
+          esButton.classList.remove('navbar__languague--selected');
+        }
+      }
+      esTitle.classList.add('disabled');
+      enTitle.classList.remove('disabled');
+
+      enMetogology.classList.remove('disabled');
+      esMetogology.classList.add('disabled');
+
+      enAboutBloy.classList.remove('disabled');
+      esAboutBloy.classList.add('disabled');
+    }
   });
 }
 
@@ -113,42 +168,4 @@ languageToggle.addEventListener('click', function () {
       ? 'Hello, welcome to my page.'
       : 'Hola, bienvenido a mi página.';
   languageToggle.classList.toggle('active');
-});
-
-/*==================== TRADUCCION CAMBIO BACKGROUND ====================*/
-const esButtons = document.querySelectorAll('.traductionBtn-es');
-const enButtons = document.querySelectorAll('.traductionBtn-en');
-
-// Función para quitar la clase seleccionada de todos los botones de una clase
-function removeSelectedClass(buttons) {
-  buttons.forEach((button) => {
-    button.classList.remove('navbar__language--selected');
-  });
-}
-
-function handleEsButtonClick() {
-  alert('toque el boton');
-  enButtons.forEach((button) => {
-    button.classList.remove('navbar__language--selected');
-  });
-  esButtons.forEach((button) => {
-    button.classList.add('navbar__language--selected');
-  });
-}
-
-function handleEnButtonClick() {
-  esButtons.forEach((button) => {
-    button.classList.remove('navbar__language--selected');
-  });
-  enButtons.forEach((button) => {
-    button.classList.add('navbar__language--selected');
-  });
-}
-
-esButtons.forEach((button) => {
-  button.addEventListener('click', handleEsButtonClick);
-});
-
-enButtons.forEach((button) => {
-  button.addEventListener('click', handleEnButtonClick);
 });
