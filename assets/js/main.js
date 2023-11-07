@@ -82,7 +82,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
   btn.classList.add('cargando');
 
   const serviceID = 'default_service';
-  const templateID = 'template_jlzyxinXXX';
+  const templateID = 'template_jlzyxin';
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
