@@ -28,7 +28,10 @@
   },
   "metodology_data": {
     "metodology_title": "Our methodology",
-    "metodology_subtitle": "We apply Agile, Design Thinking  <br> and Lean to accomplish our work."
+    "metodology_subtitle": "We apply Agile, Design Thinking  <br> and Lean to accomplish our work.",
+    "metodology_description--first": "Iterations of 2 weeks or as required with progress monitoring with the team and delivery of a functional product at the end of each iteration.",
+    "metodology_description--second": "We design scalable and reusable models for different use cases.",
+    "metodology_description--third": "We deliver products in each iteration under MVP (Minimum Viable Product) guidelines. We understand the impact of the solution of each use case by analyzing its objectives and value proposal."
   },
   "about_data": {
     "about_title": "About us",

@@ -517,13 +517,46 @@ body {
 }
 .metodology__container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 1400px;
 }
-.metodology__svg--web {
+.metodology__information {
+  display: flex;
+  flex-direction: column;
   width: 1400px;
+  justify-items: center;
+}
+.metodology__information h4 {
+  font-family: Segoe UI;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 6rem;
+  letter-spacing: 1.2rem;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+.metodology__title--first {
+  -webkit-text-stroke-color: rgba(249, 168, 38, 1);
+}
+.metodology__title--second {
+  -webkit-text-stroke-color: rgba(66, 233, 193, 1);
+}
+.metodology__title--third {
+  -webkit-text-stroke-color: rgba(240, 255, 71, 1);
+}
+.metodology__information p {
+  width: 450px;
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 120% */
+}
+.metodology__svg--web {
 }
 .metodology__background {
   position: absolute;
@@ -766,7 +799,8 @@ label {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-.contact__form button {
+.contact__form--button--es,
+.contact__form--button--en {
   background-color: transparent;
   color: #fff;
   display: flex;
@@ -780,8 +814,11 @@ label {
   align-self: flex-end;
   transition: all 0.8s ease-in-out;
 }
-.contact__form--button::after {
+.contact__form--button--es::after {
   content: 'Enviar';
+}
+.contact__form--button--en::after {
+  content: 'Send';
 }
 .contact__form button:hover {
   background-color: #5e17eb;
@@ -803,6 +840,20 @@ label {
 }
 
 .cargando[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.charging {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.charging:after {
+  content: 'Sending...';
+}
+
+.charging[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1112,7 +1163,7 @@ label {
     width: 350px;
   }
   .services__list-first {
-    width: 350px;
+    width: 300px;
     justify-content: space-around;
   }
   .services__list-first h3 {
@@ -1124,7 +1175,7 @@ label {
   }
   .services__list-second {
     display: flex;
-    width: 350px;
+    width: 300px;
     flex-direction: column;
     align-items: center;
     justify-items: center;
@@ -1134,7 +1185,7 @@ label {
   }
   .services__list-second-open {
     width: 300px;
-    height: 580px;
+    height: auto;
     max-height: 580px;
   }
   .services__list-second div p {
@@ -1165,15 +1216,26 @@ label {
     width: 300px;
     margin-top: 1rem;
   }
-  .agile {
-    text-align: center;
-    font-family: Segoe UI;
+  .metodology__information {
+    width: 300px;
+  }
+  .metodology__information h4 {
     font-size: 2rem;
+    letter-spacing: 0.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .metodology__information p {
+    text-align: start;
+    color: #fff;
+    font-family: Segoe UI;
+    font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
-    line-height: 3rem; /* 150% */
-    letter-spacing: 0.6rem;
-    color: white;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+  }
+  .metodology__title--first {
+    margin-top: 2rem;
   }
 
   .about-us {

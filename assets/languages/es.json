@@ -28,7 +28,10 @@
   },
   "metodology_data": {
     "metodology_title": "Nuestra metodologia de trabajo",
-    "metodology_subtitle": "Aplicamos Agile, Design Thinking y Lean  <br> para llevar a cabo nuestro trabajo."
+    "metodology_subtitle": "Aplicamos Agile, Design Thinking y Lean  <br> para llevar a cabo nuestro trabajo.",
+    "metodology_description--first": "Iteraciones de 2 semanas o a requerir con seguimiento de avance con el equipo y entrega de un producto funcional al finalizar cada iteración.",
+    "metodology_description--second": "Diseñamos modelos escalables y reutilizables para distintos casos de uso.",
+    "metodology_description--third": "Entregamos productos en cada iteración bajo lineamientos MVP (Mínimo Producto Viable). Entendemos el impacto de la solución de cada caso de uso analizando sus objetivos y propuesta de valor."
   },
   "about_data": {
     "about_title": "Sobre nosotros",

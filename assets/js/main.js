@@ -74,27 +74,37 @@ skillsIcon2.addEventListener('click', openSkillsBar2);
 
 /*==================== SEND CONTACT INFORMATION ====================*/
 
-const btn = document.getElementById('button');
+const btnEs = document.getElementById('button--es');
+const btnEn = document.getElementById('button--en');
 
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  btn.classList.add('cargando');
-
   const serviceID = 'default_service';
-  const templateID = 'template_jlzyxin';
+  const templateID = 'template_jlzyxinXX';
 
-  emailjs.sendForm(serviceID, templateID, this).then(
-    () => {
-      btn.classList.remove('cargando');
-      alert('Sent!');
-    },
-    (err) => {
-      btn.classList.remove('cargando');
-      btn.value = 'Send Email';
-      alert('Error!');
-    }
-  );
+  function sendMail(boton, addedClass) {
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        boton.classList.remove(addedClass);
+        alert('Sent!');
+      },
+      (err) => {
+        boton.classList.remove(addedClass);
+        alert('Error!');
+      }
+    );
+  }
+
+  if (btnEn.classList.contains('disabled')) {
+    alert('Enviando...');
+    btnEs.classList.add('cargando');
+    sendMail(btnEs, 'cargando');
+  } else if (btnEs.classList.contains('disabled')) {
+    alert('Sending...');
+    btnEn.classList.add('charging');
+    sendMail(btnEn, 'charging');
+  }
 });
 
 /*==================== TRADUCCION EN/ES ====================*/
@@ -119,6 +129,9 @@ const metodologyImageEs1 = document.getElementById('metodology_mobile1--es');
 const metodologyImageEs2 = document.getElementById('metodology_mobile2--es');
 const metodologyImageEs3 = document.getElementById('metodology_mobile3--es');
 const metodologyImageEn = document.getElementById('metodology_mobile--en');
+
+const buttonEs = document.getElementById('button--es');
+const buttonEn = document.getElementById('button--en');
 
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
@@ -160,6 +173,9 @@ for (let i = 0; i < traductionBtn.length; i++) {
       metodologyImageEs2.classList.remove('disabled');
       metodologyImageEs3.classList.remove('disabled');
       metodologyImageEn.classList.add('disabled');
+
+      buttonEs.classList.remove('disabled');
+      buttonEn.classList.add('disabled');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -184,6 +200,9 @@ for (let i = 0; i < traductionBtn.length; i++) {
       metodologyImageEs2.classList.add('disabled');
       metodologyImageEs3.classList.add('disabled');
       metodologyImageEn.classList.remove('disabled');
+
+      buttonEs.classList.add('disabled');
+      buttonEn.classList.remove('disabled');
     }
   });
 }
