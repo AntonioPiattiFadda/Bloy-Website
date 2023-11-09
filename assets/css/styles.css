@@ -771,7 +771,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 0.5rem;
   width: 250px;
 }
@@ -783,16 +782,64 @@ body {
   font-weight: 500;
   line-height: 1.5rem; /* 150% */
 }
-label {
+.contact__label--data,
+.contact__label--ux,
+.contact__label--name,
+.contact__label--email,
+.contact__label--message {
   color: #fff;
   font-family: var(--Sagoe);
-  width: 500px;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   line-height: 1.5rem; /* 150% */
   margin-bottom: 1rem;
 }
+
+.contact__label--name,
+.contact__label--email,
+.contact__label--message {
+  width: 500px;
+}
+
+.mycheck {
+  border: 3px solid red;
+  background-image: url('../img/checkBoxes.svg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  padding: 0;
+  user-select: none;
+  flex-shrink: 0;
+  color: #2563eb;
+  border-width: 1px;
+}
+
+.mycheck {
+  cursor: pointer;
+  background-color: var(--background-color);
+  width: 24px;
+  height: 24px;
+  appearance: none;
+  border: 2px solid var(--font-color);
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.mycheck:checked {
+  background-color: var(--violeta);
+}
+
+.mycheck:focus {
+  outline: none;
+}
+
 .contact__obligatorio {
   color: rgba(255, 255, 255, 0.5);
   font-family: var(--Sagoe);

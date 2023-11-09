@@ -74,8 +74,8 @@ skillsIcon2.addEventListener('click', openSkillsBar2);
 
 /*==================== SEND CONTACT INFORMATION ====================*/
 
-const btnEs = document.getElementById('button--es');
-const btnEn = document.getElementById('button--en');
+const sendButtonEs = document.getElementById('send--button--es');
+const sendButtonEn = document.getElementById('send--button--en');
 
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
@@ -96,14 +96,30 @@ document.getElementById('form').addEventListener('submit', function (event) {
     );
   }
 
-  if (btnEn.classList.contains('disabled')) {
-    alert('Enviando...');
-    btnEs.classList.add('cargando');
-    sendMail(btnEs, 'cargando');
-  } else if (btnEs.classList.contains('disabled')) {
-    alert('Sending...');
-    btnEn.classList.add('charging');
-    sendMail(btnEn, 'charging');
+  if (sendButtonEn.classList.contains('disabled')) {
+    sendButtonEs.classList.add('cargando');
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        sendButtonEs.classList.remove('cargando');
+        alert('Sent!');
+      },
+      (err) => {
+        sendButtonEs.classList.remove('cargando');
+        alert('Error!');
+      }
+    );
+  } else if (sendButtonEs.classList.contains('disabled')) {
+    sendButtonEn.classList.add('charging');
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        sendButtonEn.classList.remove('charging');
+        alert('Sent!');
+      },
+      (err) => {
+        sendButtonEn.classList.remove('charging');
+        alert('Error!');
+      }
+    );
   }
 });
 
@@ -115,23 +131,12 @@ const textsToChange = document.querySelectorAll('[data-section]');
 const esTitle = document.getElementById('home_titleEs');
 const enTitle = document.getElementById('home_titleEn');
 
-const esMetogology = document.getElementById('metodology__id--es');
-const enMetogology = document.getElementById('metodology__id--en');
-
 const esAboutBloy = document.getElementById('about__bloy--es');
 const enAboutBloy = document.getElementById('about__bloy--en');
 
 const nameInput = document.getElementById('name__input');
 const emailInput = document.getElementById('email__input');
 const messageInput = document.getElementById('message__input');
-
-const metodologyImageEs1 = document.getElementById('metodology_mobile1--es');
-const metodologyImageEs2 = document.getElementById('metodology_mobile2--es');
-const metodologyImageEs3 = document.getElementById('metodology_mobile3--es');
-const metodologyImageEn = document.getElementById('metodology_mobile--en');
-
-const buttonEs = document.getElementById('button--es');
-const buttonEn = document.getElementById('button--en');
 
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
@@ -159,9 +164,6 @@ for (let i = 0; i < traductionBtn.length; i++) {
       enTitle.classList.add('disabled');
       esTitle.classList.remove('disabled');
 
-      esMetogology.classList.remove('disabled');
-      enMetogology.classList.add('disabled');
-
       esAboutBloy.classList.remove('disabled');
       enAboutBloy.classList.add('disabled');
 
@@ -169,13 +171,8 @@ for (let i = 0; i < traductionBtn.length; i++) {
       emailInput.placeholder = 'Ingrese su email';
       messageInput.placeholder = 'Ingrese su mensaje';
 
-      metodologyImageEs1.classList.remove('disabled');
-      metodologyImageEs2.classList.remove('disabled');
-      metodologyImageEs3.classList.remove('disabled');
-      metodologyImageEn.classList.add('disabled');
-
-      buttonEs.classList.remove('disabled');
-      buttonEn.classList.add('disabled');
+      sendButtonEs.classList.remove('disabled');
+      sendButtonEn.classList.add('disabled');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -186,9 +183,6 @@ for (let i = 0; i < traductionBtn.length; i++) {
       esTitle.classList.add('disabled');
       enTitle.classList.remove('disabled');
 
-      enMetogology.classList.remove('disabled');
-      esMetogology.classList.add('disabled');
-
       enAboutBloy.classList.remove('disabled');
       esAboutBloy.classList.add('disabled');
 
@@ -196,13 +190,8 @@ for (let i = 0; i < traductionBtn.length; i++) {
       emailInput.placeholder = 'Enter your email';
       messageInput.placeholder = 'Enter your message';
 
-      metodologyImageEs1.classList.add('disabled');
-      metodologyImageEs2.classList.add('disabled');
-      metodologyImageEs3.classList.add('disabled');
-      metodologyImageEn.classList.remove('disabled');
-
-      buttonEs.classList.add('disabled');
-      buttonEn.classList.remove('disabled');
+      sendButtonEs.classList.add('disabled');
+      sendButtonEn.classList.remove('disabled');
     }
   });
 }

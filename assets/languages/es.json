@@ -47,8 +47,7 @@
     "contact_form--title": "¿Con que podemos ayudarte?",
     "contact_form--name": "Nombre <span class='contact__obligatorio'>(Obligatorio)</span>",
     "contact_form--email": "Correo electronico  <span class='contact__obligatorio'>(Obligatorio)</span>",
-    "contact_form--message": "Mensaje <span class='contact__obligatorio'>(Obligatorio)</span>",
-    "contact_form--button": "Enviar"
+    "contact_form--message": "Mensaje <span class='contact__obligatorio'>(Obligatorio)</span>"
   },
   "footer_data": {
     "footer_title": "Contacto",
