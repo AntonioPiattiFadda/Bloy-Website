@@ -219,8 +219,9 @@ body {
   line-height: 6rem; /* 150% */
   text-align: start;
 }
-.typed {
-  width: 100px;
+.typedEn,
+.typedEs {
+  padding-left: 1rem;
 }
 .home__title-animation {
   display: inline-block;
