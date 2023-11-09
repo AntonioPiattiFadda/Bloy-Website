@@ -1413,7 +1413,9 @@ body {
   .contact__checkboxes div {
     width: 100px;
   }
-  label {
+  .contact__label--name,
+  .contact__label--email,
+  .contact__label--message {
     width: 300px;
   }
 
