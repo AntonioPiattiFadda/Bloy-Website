@@ -1,6 +1,6 @@
 /*==================== HERO TITLE ANIMATION ====================*/
 const typed = new Typed('.typedEs', {
-  strings: ['Digital', 'Agil', 'Eficaz'],
+  strings: ['Digital', 'Agil', 'Effective'],
   typeSpeed: 300,
   startDelay: 300,
   backSpeed: 75,
