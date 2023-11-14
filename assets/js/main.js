@@ -106,7 +106,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
       (err) => {
         sendButtonEs.classList.remove('cargando');
         alert('Error!');
-      }g
+      }
     );
   } else if (sendButtonEs.classList.contains('disabled')) {
     sendButtonEn.classList.add('charging');
