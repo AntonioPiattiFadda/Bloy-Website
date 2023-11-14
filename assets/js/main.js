@@ -1,6 +1,6 @@
 /*==================== HERO TITLE ANIMATION ====================*/
 const typed = new Typed('.typedEs', {
-  strings: ['Digital', 'Agil', 'Effective'],
+  strings: ['Digital', 'Agil', 'Eficaz'],
   typeSpeed: 300,
   startDelay: 300,
   backSpeed: 75,
@@ -14,7 +14,7 @@ const typed = new Typed('.typedEs', {
   contentType: 'html',
 });
 const typed2 = new Typed('.typedEn', {
-  strings: ['Digital', 'Agile', 'Eficaz'],
+  strings: ['Digital', 'Agile', 'Effective'],
   typeSpeed: 300,
   startDelay: 300,
   backSpeed: 75,
@@ -77,43 +77,43 @@ skillsIcon2.addEventListener('click', openSkillsBar2);
 const sendButtonEs = document.getElementById('send--button--es');
 const sendButtonEn = document.getElementById('send--button--en');
 
+function mostrarMensajeEnviado(language) {
+  var modal = document.getElementById('mensajeEnviadoModal');
+  if (language === 'es') {
+    modal.innerHTML = '<p><span>✔</span> Mensaje Enviado</p>';
+  } else if (language === 'en') {
+    modal.innerHTML = '<p><span>✔</span> Message Sent</p>';
+  }
+  modal.style.display = 'block';
+  setTimeout(function () {
+    modal.style.display = 'none';
+  }, 3000);
+}
+
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
 
   const serviceID = 'default_service';
   const templateID = 'template_jlzyxin';
 
-  function sendMail(boton, addedClass) {
-    emailjs.sendForm(serviceID, templateID, this).then(
-      () => {
-        boton.classList.remove(addedClass);
-        alert('Sent!');
-      },
-      (err) => {
-        boton.classList.remove(addedClass);
-        alert('Error!');
-      }
-    );
-  }
-
   if (sendButtonEn.classList.contains('disabled')) {
     sendButtonEs.classList.add('cargando');
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
         sendButtonEs.classList.remove('cargando');
-        alert('Sent!');
+        mostrarMensajeEnviado('es');
       },
       (err) => {
         sendButtonEs.classList.remove('cargando');
         alert('Error!');
-      }
+      }g
     );
   } else if (sendButtonEs.classList.contains('disabled')) {
     sendButtonEn.classList.add('charging');
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
         sendButtonEn.classList.remove('charging');
-        alert('Sent!');
+        mostrarMensajeEnviado('en');
       },
       (err) => {
         sendButtonEn.classList.remove('charging');

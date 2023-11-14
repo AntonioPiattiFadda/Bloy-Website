@@ -93,13 +93,14 @@
     
     
             <section class="services section" id="services">
-                  <h2 data-section="services_data" data-value="services_title" class="section__title">Nuestros servicios</h2>
+                  <h2 data-section="services_data" data-value="services_title" class="section__title services_title">Nuestros servicios</h2>
+                  <img src="./assets/img/Lines left.svg" class="lines__left" alt="">
+                  <img src="./assets/img/Lines right.svg" class="lines_rigth lines_rigth-services" alt="">
+
                   <div class="services__container">
-                    <img src="./assets/img/Lines left.svg" class="lines__left" alt="">
                   
 
                   <div class="services__description">
-                    <img src="./assets/img/Lines right.svg" class="lines_rigth lines_rigth-services" alt="">
                     <div class="services__left">
                       <h2 data-section="services_data" data-value="services_subtitle" class="section__subtitle section__title">Que <span class="subtitle__decoration">servicios</span> <br>
                         estamos ofreciendo</h2>
@@ -113,17 +114,17 @@
                     <div class="services__list-container">
                       <div class="services__list-first">
                         <h3> UX/UI Design</h3>
-                        <!-- <p data-section="services_data" data-value="services_description--ux">Transformamos ideas en soluciones digitales impactantes a través del diseño UX/UI. Creamos aplicaciones web, móviles o de escritorio que combinan una funcionalidad excepcional con experiencias atractivas e intuitivas. Su visión cobra vida en el mundo digital con nuestro enfoque holístico.</p> -->
+                        <p data-section="services_data" data-value="services_description--ux">Transformamos ideas en soluciones digitales impactantes a través del diseño UX/UI. Creamos aplicaciones web, móviles o de escritorio que combinan una funcionalidad excepcional con experiencias atractivas e intuitivas. Su visión cobra vida en el mundo digital con nuestro enfoque holístico.</p>
                         <span class="services__arrow-second" id="services__arrow-second">
                       </div>
                       <div class="services__list-second" id="services__list-second">
                         <div>
-                          <h4 data-section="services_data" data-value="services_description--invest">Investigacion</h4>
-                          <p data-section="services_data" data-value="services_description--invest--text">Es la base de toda solución de D&A, consiste en el desarrollo de una infraestructura de datos automatizada y escalable.</p>
+                          <h4 data-section="services_data" data-value="services_description--invest">Investigación</h4>
+                          <p data-section="services_data" data-value="services_description--invest--text">En esta primera etapa del proceso realizamos entrevista con usuarios, encuestas, benchmarking, evaluación heurística y testeo de usabilidad.</p>
                         </div>
                         <div>
                           <h4 data-section="services_data" data-value="services_description--Idesign">Diseño interactivo</h4>
-                          <p data-section="services_data" data-value="services_description--Idesign--text">La elegancia de los datos, presentados de una forma atractiva y clara en el momento adecuado mediante dashboards.</p>
+                          <p data-section="services_data" data-value="services_description--Idesign--text">En esta etapa nos centramos en el prototipado, user persona, user journey y wireframing.</p>
                         </div>
                         <div>
                           <h4 data-section="services_data" data-value="services_description--Vdesign">Diseño visual</h4>
@@ -135,17 +136,17 @@
                     <div class="services__list-container">
                       <div class="services__list-first">
                        <h3 > Data & Analytics</h3>
-                       <!-- <p data-section="services_data" data-value="services_description--data">Entendemos tus datos para convertirlos en información precisa y de valor en el momento adecuado. Queremos potenciar tu organización data-driven.</p>  -->
+                       <p data-section="services_data" data-value="services_description--data">Entendemos tus datos para convertirlos en información precisa y de valor en el momento adecuado. Queremos potenciar tu organización data-driven.</p> 
                        <span class="services__arrow-first" id="services__arrow-first"></span>
                        </div>
                       <div class="services__list-second" id="services__list-first">
                         <div>
-                          <h4 data-section="services_data" data-value="services_description--eng">Ingenieria de datos</h4>
+                          <h4 data-section="services_data" data-value="services_description--eng">Ingeniería de datos</h4>
                           <p data-section="services_data" data-value="services_description--eng--text">Es la base de toda solución de D&A, consiste en el desarrollo de una infraestructura de datos automatizada y escalable.</p>
 
                         </div>
                         <div>
-                          <h4 data-section="services_data" data-value="services_description--Vdata">Visualizacion de datos</h4>
+                          <h4 data-section="services_data" data-value="services_description--Vdata">Visualización de datos</h4>
                           <p data-section="services_data" data-value="services_description--Vdata--text">La elegancia de los datos, presentados de una forma atractiva y clara en el momento adecuado mediante dashboards.</p>
                         </div>
                         
@@ -159,7 +160,7 @@
 
             <section class="metodology section " id="metodology">
               <h2 data-section="metodology_data" data-value="metodology_title" class="section__title metodology_title">Nuestra metodologia de trabajo</h2>
-              <p class="metodology__subtitle" data-section="metodology_data" data-value="metodology_subtitle">Aplicamos Agile, Design Thinking y Lean <br> para llevar a cabo nuestro trabajo.</p>
+              <p class="metodology__subtitle" data-section="metodology_data" data-value="metodology_subtitle">Aplicamos Agile, Design Thinking y Lean <br class="mobile_br"> para llevar a cabo nuestro trabajo.</p>
               <div class="metodology__container">
                 <img class="metodology__svg--mobile2" src="./assets/img/metodologia-grafico-mobile.svg" alt="">
                 <div class="metodology__information">
@@ -255,6 +256,10 @@
                     <button class="contact__form--button--es" id="send--button--es"></button>
                     <button class="contact__form--button--en disabled" id="send--button--en"></button>
                   </form>
+                  <div class="modal" id="mensajeEnviadoModal">
+                    
+                  </div>
+                  
                 </div>
               </div>
               <div class="contact__background background__blur"></div>
