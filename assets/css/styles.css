@@ -8,13 +8,18 @@
 
   /* Font sizes */
   --title-size-XL: 64px;
-  --subTitle-size: 24px;
-  --description-size: 20px;
+  --subTitle-size-XL: 24px;
+  --description-size-XL: 20px;
   --nav-anchor-size: 16px;
-  /* Ver el tema del tamaño de las fuentes con Maxi */
-  --metodology-subtitle-size: 4rem;
+  --metodology-subtitle-size: 64px;
 
-  --title-size-L: 3rem;
+  --title-size-L: 48px;
+  --subTitle-size-L: 24px;
+  --description-size-L: 20px;
+
+  --title-size-Mobile: 30px;
+  --subTitle-size-Mobile: 16px;
+  --description-size-Mobile: 16px;
 
   /* Font family */
   --Sagoe: 'Segoe UI', Arial, sans-serif;
@@ -253,9 +258,8 @@ body {
   color: #fff;
   text-align: center;
   /* Ver la fuente */
-
   font-family: var(--Sagoe);
-  font-size: var(--subTitle-size);
+  font-size: var(--subTitle-size-XL);
   font-style: normal;
   font-weight: 400;
   line-height: 2.25rem; /* 150% */
@@ -334,7 +338,7 @@ body {
   text-align: left;
   color: #fff;
   font-family: var(--Sagoe);
-  font-size: var(--description-size);
+  font-size: var(--description-size-XL);
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem; /* 150% */
@@ -376,7 +380,7 @@ body {
   text-align: left;
   color: #fff;
   font-family: var(--Sagoe);
-  font-size: var(--description-size);
+  font-size: var(--description-size-XL);
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem; /* 150% */
@@ -412,7 +416,7 @@ body {
 .services__list-second div h4 {
   color: #f9a826;
   font-family: var(--Sagoe);
-  font-size: var(--subTitle-size);
+  font-size: var(--subTitle-size-XL);
   font-style: normal;
   font-weight: 600;
   line-height: 2.25rem; /* 150% */
@@ -462,7 +466,7 @@ body {
 }
 
 .lines_rigth-services {
-  bottom: 47rem;
+  top: 39rem;
 }
 
 /*==================== METODOLOGY ====================*/
@@ -479,7 +483,7 @@ body {
   color: #fff;
   margin-bottom: 1rem;
   text-align: center;
-  font-size: var(--description-size);
+  font-size: var(--description-size-XL);
 }
 .metodology__container {
   display: flex;
@@ -518,7 +522,7 @@ body {
   width: 450px;
   color: #fff;
   font-family: var(--Sagoe);
-  font-size: var(--description-size);
+  font-size: var(--description-size-XL);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5rem; /* 120% */
@@ -565,7 +569,7 @@ body {
   text-align: left;
   color: #fff;
   font-family: var(--Sagoe);
-  font-size: var(--description-size);
+  font-size: var(--description-size-XL);
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem; /* 150% */
@@ -977,7 +981,7 @@ body {
 .footer__firstLine--redes div h4 {
   color: #fff;
   font-family: var(--Sagoe);
-  font-size: var(--subTitle-size);
+  font-size: var(--subTitle-size-XL);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -1049,7 +1053,15 @@ body {
     grid-template-columns: 1.2fr 0.8fr;
     z-index: 0;
   }
-
+  .home__container-left h1 {
+    font-size: var(--title-size-L);
+  }
+  .home__container-left p {
+    font-size: var(--subTitle-size-L);
+  }
+  .services__list-first p {
+    font-size: var(--nav-anchor-size);
+  }
   .navbar,
   .services__description,
   .services__list,
@@ -1072,18 +1084,26 @@ body {
     height: 80px;
   }
   .hero__img {
-    width: 30.25rem;
+    width: 384px;
+    height: 251px;
+  }
+  .metodology__information h4 {
+    font-size: var(--title-size-L);
+  }
+  .metodology__information p {
+    font-size: var(--nav-anchor-size);
+  }
+  .metodology__svg--web {
+    width: 431px;
+    height: 372.781px;
+  }
+  .about-us__left p {
+    font-size: var(--nav-anchor-size);
   }
   .section__title {
     font-size: var(--title-size-L);
   }
-  .services h2 {
-    margin-bottom: 0;
-  }
 
-  .home__container-left h1 {
-    font-size: var(--title-size-L);
-  }
   .services__list-first h3 {
     font-size: var(--title-size-L);
   }
@@ -1127,7 +1147,7 @@ body {
     align-items: center;
   }
   .home__container-left h1 {
-    font-size: 1.8rem;
+    font-size: var(--title-size-Mobile);
     font-style: normal;
     font-weight: 600;
     line-height: 3rem;
@@ -1163,16 +1183,19 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .services__list-first-description {
+    display: none;
+  }
   .services__left {
     width: var(--mobile-section-width);
   }
-  .services h2 {
-    margin-bottom: 0;
-  }
+
   .services__right {
     width: var(--mobile-section-width);
   }
-
+  .lines_rigth-services {
+    top: 49rem;
+  }
   .section {
     padding: 6rem 0 2rem;
   }
@@ -1317,19 +1340,12 @@ body {
   .home__container-right {
     width: var(--mobile-section-width);
   }
-  .home__container-left h1 {
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 3rem;
-    text-align: center;
-  }
 
   .home__container-left p {
     color: #fff;
     text-align: center;
     font-family: var(--Sagoe);
-    font-size: 1rem;
+    font-size: var(--description-size-Mobile);
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem; /* 150% */
@@ -1422,7 +1438,7 @@ body {
     width: var(--mobile-section-width);
   }
   .metodology__information h4 {
-    font-size: var(--title-size-L);
+    font-size: var(--title-size-Mobile);
     letter-spacing: 0.8rem;
     line-height: 2.2rem;
     margin-bottom: 1rem;
