@@ -80,8 +80,15 @@
                 <div class="home__container">
                     <div class="home__container-left">
                     
-                      <h1  id="home_titleEs" >Transformacion <span class="home__title-animation"><span class="typedEs"></span> <div class="home__title-decoration"></div></span> <br> para tu negocio</h1>
-                      <h1 class="disabled" id="home_titleEn" ><span class='home__title-animation'><span class='typedEn'></span> <div class='home__title-decoration'></div></span> Transformation <br> for your business</h1>
+                      <h1  id="home_titleEs" >Transformacion <span class="home__title-animation">
+                        <div class="holis">
+                        <span class="typedEs"></span> <div class="home__title-decoration"></div>
+                        </div></span> <br> para tu negocio</h1>
+                      <h1 class="disabled" id="home_titleEn" ><span class='home__title-animation'>
+                        <div class="holis">
+                        <span class='typedEn'></span> <div class='home__title-decoration'></div>
+                      </div>
+                      </span> Transformation <br> for your business</h1>
                       <p data-section="home_data" data-value="home_subtitle">Convertimos tus ideas en realidad</p>
                     </div>
                     <div class="home__container-right">
@@ -177,9 +184,10 @@
                   <p data-section="metodology_data" data-value="metodology_description--third" class="metodology__description--third">Entregamos productos en cada iteración bajo lineamientos MVP (Mínimo Producto Viable). Entendemos el impacto de la solución de cada caso de uso analizando sus objetivos y propuesta de valor.</p>
                  </div>
                  </div>
+                 
                  <img class="metodology__svg--web" src="./assets/img/metodologia-grafico-web.svg" alt="">
 
-                <div class="metodology__background background__blur"></div>
+                <div class="metodology__background"></div>
               </div>
           </section>
     
@@ -216,7 +224,7 @@
                     de ti.</h4>
                   </div>
                  
-                  <p data-section="contact_data" data-value="contact_subtitle">Comencemos a trabajar juntos.</p>
+                  <p data-section="contact_data" data-value="contact_subtitle">Comencemos a trabajar <br> juntos.</br>
                   <div  class="contact__firstline--info">
                     <div class="contact__firstline--mail">
                       <p data-section="contact_data" data-value="contact_mail">Contacto</p> 
@@ -253,12 +261,17 @@
                     <input id="email__input" placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email" id="email">
                     <label class="contact__label--message" data-section="contact_data" data-value="contact_form--message" for="name">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
                     <textarea  id="message__input" placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" id="message" cols="30" rows="10"></textarea>
-                    <button class="contact__form--button--es" id="send--button--es"></button>
-                    <button class="contact__form--button--en disabled" id="send--button--en"></button>
-                  </form>
-                  <div class="modal" id="mensajeEnviadoModal">
-                    
+                    <div class="contact__button-container">
+                      <div id="error__message" class="error__message"></div>
+                      <div class="modal" id="mensajeEnviadoModal">
+                      </div>
+                      <button class="contact__form--button--es" id="send--button--es"></button>
+                      <button class="contact__form--button--en disabled" id="send--button--en"></button>
                   </div>
+                  
+                   
+                  </form>
+               
                   
                 </div>
               </div>

@@ -77,17 +77,68 @@ skillsIcon2.addEventListener('click', openSkillsBar2);
 const sendButtonEs = document.getElementById('send--button--es');
 const sendButtonEn = document.getElementById('send--button--en');
 
+const nameInput = document.getElementById('name__input');
+const emailInput = document.getElementById('email__input');
+const messageInput = document.getElementById('message__input');
+
+function validarFormulario(language) {
+  var errorMessage = document.getElementById('error__message');
+  let nameError = 'Por favor ingrese su nombre';
+  let emailError = 'Por favor ingrese su email';
+  let messageError = 'Por favor ingrese su mensaje';
+
+  if (language === 'en') {
+    nameError = 'Please enter your name';
+    emailError = 'Please enter your email';
+    messageError = 'Please enter your message';
+  }
+
+  if (nameInput.value === '') {
+    errorMessage.innerHTML = nameError;
+    nameInput.focus();
+    nameInput.classList.add('error');
+    setTimeout(function () {
+      errorMessage.innerHTML = '';
+      nameInput.classList.remove('error');
+    }, 2000);
+    return;
+  } else if (emailInput.value === '') {
+    errorMessage.innerHTML = emailError;
+    emailInput.focus();
+    emailInput.classList.add('error');
+    setTimeout(function () {
+      errorMessage.innerHTML = '';
+      emailInput.classList.remove('error');
+    }, 2000);
+    return;
+  } else if (messageInput.value === '') {
+    errorMessage.innerHTML = messageError;
+    messageInput.focus();
+    messageInput.classList.add('error');
+    setTimeout(function () {
+      errorMessage.innerHTML = '';
+      messageInput.classList.remove('error');
+    }, 2000);
+
+    return;
+  }
+  return 'OK';
+}
+
 function mostrarMensajeEnviado(language) {
   var modal = document.getElementById('mensajeEnviadoModal');
   if (language === 'es') {
-    modal.innerHTML = '<p><span>✔</span> Mensaje Enviado</p>';
+    modal.innerHTML = '<p>Gracias por tu mensaje!</p>';
   } else if (language === 'en') {
-    modal.innerHTML = '<p><span>✔</span> Message Sent</p>';
+    modal.innerHTML = '<p>Thank you for your message!</p>';
   }
   modal.style.display = 'block';
   setTimeout(function () {
     modal.style.display = 'none';
   }, 3000);
+}
+{
+  /* <span>✔</span> */
 }
 
 document.getElementById('form').addEventListener('submit', function (event) {
@@ -96,19 +147,31 @@ document.getElementById('form').addEventListener('submit', function (event) {
   const serviceID = 'default_service';
   const templateID = 'template_jlzyxin';
 
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+  });
+
   if (sendButtonEn.classList.contains('disabled')) {
+    const validator = validarFormulario('es');
+    if (validator !== 'OK') return;
     sendButtonEs.classList.add('cargando');
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
         sendButtonEs.classList.remove('cargando');
         mostrarMensajeEnviado('es');
+        emailInput.value = '';
+        nameInput.value = '';
+        messageInput.value = '';
       },
       (err) => {
         sendButtonEs.classList.remove('cargando');
+
         alert('Error!');
       }
     );
   } else if (sendButtonEs.classList.contains('disabled')) {
+    validarFormulario('en');
+    if (validator !== 'OK') return;
     sendButtonEn.classList.add('charging');
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
@@ -133,10 +196,6 @@ const enTitle = document.getElementById('home_titleEn');
 
 const esAboutBloy = document.getElementById('about__bloy--es');
 const enAboutBloy = document.getElementById('about__bloy--en');
-
-const nameInput = document.getElementById('name__input');
-const emailInput = document.getElementById('email__input');
-const messageInput = document.getElementById('message__input');
 
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
