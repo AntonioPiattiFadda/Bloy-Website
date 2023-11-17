@@ -2,9 +2,9 @@
   "nav_data": {
     "nav_home": "Inicio",
     "nav_services": "Servicios",
-    "nav_metodology": "Metodologia",
+    "nav_metodology": "Metodología",
     "nav_about": "Nosotros",
-    "nav_contact": "Contactanos"
+    "nav_contact": "Contáctanos"
   },
   "home_data": {
     "home_subtitle": "Convertimos tus ideas en realidad"
@@ -27,7 +27,7 @@
     "services_description--Vdata--text": "La elegancia de los datos, presentados de una forma atractiva y clara en el momento adecuado mediante dashboards."
   },
   "metodology_data": {
-    "metodology_title": "Nuestra metodologia de trabajo",
+    "metodology_title": "Nuestra metodología de trabajo",
     "metodology_subtitle": "Aplicamos Agile, Design Thinking y Lean  <br> para llevar a cabo nuestro trabajo.",
     "metodology_description--first": "Iteraciones de 2 semanas o a requerir con seguimiento de avance con el equipo y entrega de un producto funcional al finalizar cada iteración.",
     "metodology_description--second": "Diseñamos modelos escalables y reutilizables para distintos casos de uso.",
@@ -40,11 +40,11 @@
   },
   "contact_data": {
     "contact_title": "Contacto",
-    "contact_rectangle": "Nos encantaria <br> saber de ti.",
+    "contact_rectangle": "Nos encantaría <br> saber de ti.",
     "contact_subtitle": "Comencemos a trabajar <br> juntos.",
     "contact_phone": "Teléfono",
     "contact_mail": "Contacto",
-    "contact_form--title": "¿Con que podemos ayudarte?",
+    "contact_form--title": "¿Con qué podemos ayudarte?",
     "contact_form--name": "Nombre <span class='contact__obligatorio'>(Obligatorio)</span>",
     "contact_form--email": "Correo electronico  <span class='contact__obligatorio'>(Obligatorio)</span>",
     "contact_form--message": "Mensaje <span class='contact__obligatorio'>(Obligatorio)</span>"
