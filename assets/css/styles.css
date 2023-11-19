@@ -21,6 +21,8 @@
   --subTitle-size-Mobile: 16px;
   --description-size-Mobile: 16px;
 
+  --description-size-small-Mobile: 13px;
+
   /* Font family */
   --Sagoe: 'Segoe UI', Arial, sans-serif;
 
@@ -28,6 +30,7 @@
   --XL-web-section-width: 1466px;
   --L-web-section-width: 1016px;
   --mobile-section-width: 390px;
+  --small-mobile-section-width: 320px;
 }
 
 * {
@@ -1188,6 +1191,12 @@ body {
     height: 59px;
     transform: translateY(0);
   }
+  .home__title-decoration {
+    height: 9px;
+    width: 9px;
+    right: -5.5px;
+    top: -5.5px;
+  }
   .home_typed-container {
     transform: translateX(0);
   }
@@ -1429,7 +1438,7 @@ body {
   }
   .services__list-first h3 {
     font-size: var(--title-size-Mobile);
-    width: 250px;
+    width: 235px;
   }
   .services__list-container {
     width: var(--mobile-section-width);
@@ -1557,7 +1566,7 @@ body {
   }
   .contact__rectangle {
     align-self: center;
-    width: 250px;
+    width: 90%;
     margin-top: 1rem;
   }
   .contact__rectangle h4 {
@@ -1610,8 +1619,7 @@ body {
     width: 330px;
     justify-content: center;
   }
-  .contact__checkboxes div {
-  }
+
   .contact__label--name,
   .contact__label--email,
   .contact__label--message {
@@ -1678,6 +1686,149 @@ body {
   }
   .footer__background {
     display: none;
+  }
+}
+@media screen and (max-width: 398px) {
+  .navbar {
+    width: var(--small-mobile-section-width);
+  }
+  .home__container-left {
+    width: var(--small-mobile-section-width);
+  }
+  .home__container-right {
+    width: var(--small-mobile-section-width);
+  }
+  .home__container-left h1 {
+    text-align: center;
+  }
+
+  .home__container-left p {
+    text-align: center;
+  }
+  .home__container-right {
+    width: var(--small-mobile-section-width);
+  }
+  .services__container {
+    width: var(--small-mobile-section-width);
+  }
+  .services__left {
+    width: var(--small-mobile-section-width);
+  }
+  .services__right {
+    width: var(--small-mobile-section-width);
+  }
+
+  .services__list-first {
+    width: var(--small-mobile-section-width);
+  }
+
+  .services__list-container {
+    width: var(--small-mobile-section-width);
+  }
+  .services__list-second {
+    width: var(--small-mobile-section-width);
+  }
+
+  .services__list-second-open {
+    width: var(--small-mobile-section-width);
+  }
+
+  .metodology p {
+    width: var(--small-mobile-section-width);
+  }
+  .metodology__container {
+    width: var(--small-mobile-section-width);
+  }
+
+  .metodology__svg--mobile1,
+  .metodology__svg--mobile2 {
+    width: var(--small-mobile-section-width);
+  }
+  .metodology__information {
+    width: var(--small-mobile-section-width);
+  }
+
+  .about-us__container {
+    width: var(--small-mobile-section-width);
+  }
+  .about-us__left {
+    width: var(--small-mobile-section-width);
+  }
+
+  .about-us__right {
+    width: var(--small-mobile-section-width);
+  }
+  .about-us__right img {
+    width: var(--small-mobile-section-width);
+    height: auto;
+  }
+  .contact__container {
+    width: var(--small-mobile-section-width);
+  }
+  .contact__title {
+    font-size: 26px;
+  }
+  .contact__rectangle h4 {
+    font-size: 26px;
+  }
+  .contact__firstline {
+    display: flex;
+    align-items: center;
+    width: var(--small-mobile-section-width);
+  }
+  .contact__firstline p {
+    width: 90%;
+    font-size: 19px;
+  }
+  .contact__secondline .contact__form {
+    width: 90%;
+  }
+  .contact__firstline--info span {
+    font-size: var(--description-size-small-Mobile);
+  }
+  .contact__form p {
+    font-size: var(--nav-anchor-size);
+  }
+  .mycheck {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+  }
+  .contact__label--data,
+  .contact__label--ux {
+    font-size: var(--description-size-small-Mobile);
+    margin-bottom: 0;
+  }
+  .contact__checkboxes div {
+    width: 152px;
+  }
+  .contact__label--name,
+  .contact__label--email,
+  .contact__label--message {
+    width: 100%;
+    font-size: var(--description-size-small-Mobile);
+  }
+  .contact__input--name,
+  .contact__input--email {
+    width: 100%;
+    font-size: var(--description-size-small-Mobile);
+  }
+  .contact__form textarea {
+    width: 100%;
+    font-size: var(--description-size-small-Mobile);
+  }
+  .contact__form--button--es {
+    font-size: var(--description-size-small-Mobile);
+  }
+  .footer__firstLine {
+    width: var(--small-mobile-section-width);
+  }
+
+  .footer__firstLine--redes {
+    width: var(--small-mobile-section-width);
+  }
+  .footer__firstLine--redes div {
+    width: auto;
   }
 }
 
