@@ -566,7 +566,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10rem 0;
+  padding: 10rem 0 5rem 0;
 }
 .about-us__left {
   width: 800px;
@@ -1067,6 +1067,9 @@ body {
 /*==================== MEDIA QUERIES ====================*/
 
 @media screen and (max-width: 1600px) and (min-width: 1124px) {
+  .section {
+    padding-bottom: 4rem;
+  }
   .home__container {
     width: var(--L-web-section-width);
     grid-template-columns: 1.2fr 0.8fr;
@@ -1430,7 +1433,7 @@ body {
     bottom: -6rem;
   }
   .services__list {
-    width: 350px;
+    width: var(--mobile-section-width);
   }
   .services__list-first {
     width: var(--mobile-section-width);
@@ -1709,6 +1712,9 @@ body {
     width: var(--small-mobile-section-width);
   }
   .services__container {
+    width: var(--small-mobile-section-width);
+  }
+  .services__list {
     width: var(--small-mobile-section-width);
   }
   .services__left {
