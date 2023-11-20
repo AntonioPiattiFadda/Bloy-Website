@@ -1168,6 +1168,37 @@ body {
 }
 
 @media screen and (max-width: 1124px) {
+  .background__blur {
+    display: none;
+  }
+  .background__blur-mobile {
+    position: absolute;
+    display: block;
+    width: 124px;
+    height: 124px;
+
+    /* background: red;
+    filter: blur(1px); */
+  }
+  .home__background-left {
+    top: 10%;
+    left: 10%;
+    width: 79px;
+    height: 79px;
+  }
+  .home__background-rigth {
+    top: 50%;
+    right: 10%;
+  }
+
+  .about-us__background {
+    top: 60%;
+  }
+  .metodology__background {
+    top: 50%;
+    width: 124px;
+    height: 124px;
+  }
   .section__title {
     font-size: var(--title-size-Mobile);
   }
