@@ -1129,9 +1129,10 @@ body {
   }
   .about-us__left p {
     font-size: var(--nav-anchor-size);
+    width: 90%;
   }
   .about__bloy {
-    scale: 0.7;
+    width: 375px;
   }
   .section__title {
     font-size: var(--title-size-L);
@@ -1389,6 +1390,7 @@ body {
   }
   .home__container-left {
     width: var(--mobile-section-width);
+    width: calc(var(--mobile-section-width));
     display: flex;
     align-items: center;
     justify-self: center;
@@ -1542,10 +1544,12 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem; /* 150% */
+    width: 100%;
   }
   .about-us__right {
     width: var(--mobile-section-width);
     margin-bottom: 1rem;
+    display: grid;
   }
   .about-us__right img {
     width: var(--mobile-section-width);
@@ -1569,7 +1573,7 @@ body {
   }
   .contact__rectangle {
     align-self: center;
-    width: 90%;
+    width: 100%;
     margin-top: 1rem;
   }
   .contact__rectangle h4 {
@@ -1691,7 +1695,7 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 398px) {
+@media screen and (max-width: 420px) {
   .navbar {
     width: var(--small-mobile-section-width);
   }
@@ -1773,6 +1777,9 @@ body {
   }
   .contact__title {
     font-size: 26px;
+  }
+  .contact__rectangle {
+    width: 90%;
   }
   .contact__rectangle h4 {
     font-size: 26px;
