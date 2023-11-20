@@ -594,6 +594,8 @@ body {
 }
 .about-us__right {
   margin-top: 2rem;
+  display: grid;
+  place-content: center;
 }
 .about-us__background {
   position: absolute;
@@ -1549,7 +1551,6 @@ body {
   .about-us__right {
     width: var(--mobile-section-width);
     margin-bottom: 1rem;
-    display: grid;
   }
   .about-us__right img {
     width: var(--mobile-section-width);
