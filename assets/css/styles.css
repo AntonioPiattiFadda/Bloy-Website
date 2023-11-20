@@ -1089,6 +1089,7 @@ body {
   .home__container-left p {
     font-size: var(--subTitle-size-L);
   }
+
   .services__subtitle-br-L {
     display: block;
   }
@@ -1249,6 +1250,10 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .services__left h2 {
+    line-height: calc(var(--title-size-Mobile) * 1.5);
+    margin-bottom: 1rem;
+  }
   .services__list-first-description {
     display: none;
   }
@@ -1265,7 +1270,7 @@ body {
   }
 
   .lines_rigth-services {
-    top: 49rem;
+    top: 45rem;
   }
   .section {
     padding: 6rem 0 2rem;
