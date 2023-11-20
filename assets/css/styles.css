@@ -1177,8 +1177,8 @@ body {
     width: 124px;
     height: 124px;
 
-    /* background: red;
-    filter: blur(1px); */
+    background: var(--violeta);
+    filter: blur(100px);
   }
   .home__background-left {
     top: 10%;
