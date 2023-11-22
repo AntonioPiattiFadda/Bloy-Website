@@ -99,6 +99,9 @@ body {
 .desktop_br-services {
   display: block;
 }
+.background__blur-mobile {
+  display: none;
+}
 /*==================== NAV ====================*/
 .header {
   position: fixed;
@@ -1223,7 +1226,7 @@ body {
   .background__blur {
     display: none;
   }
-  .background__blur-mobile {
+  /* .background__blur-mobile {
     position: absolute;
     display: block;
     width: 124px;
@@ -1231,6 +1234,19 @@ body {
 
     background: var(--violeta);
     filter: blur(100px);
+  } */
+  .background__blur-mobile {
+    display: block;
+    position: absolute;
+    z-index: 100;
+  }
+  .background__blur-mobile--left {
+    left: 0;
+    top: 0;
+  }
+  .background__blur-mobile--rigth {
+    right: 0;
+    bottom: 5rem;
   }
   .home__background-left {
     top: 10%;
@@ -1318,6 +1334,8 @@ body {
   }
   .home__subtitle {
     font-size: var(--nav-anchor-size);
+    width: 100%;
+    text-align: left;
   }
 
   .home__subtitle--en {
