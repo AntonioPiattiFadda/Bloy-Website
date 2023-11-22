@@ -71,7 +71,7 @@ body {
   border-radius: 18rem;
   background: #5e17eb;
   filter: blur(180px);
-  z-index: 1;
+  z-index: 10;
 }
 .lines__left {
   position: absolute;
@@ -226,6 +226,7 @@ body {
   position: relative;
   background: #080808;
   width: var(--XL-web-section-width);
+  z-index: 1;
 }
 
 .home__container-left {
@@ -567,7 +568,7 @@ body {
   border-radius: 18rem;
   background: #5e17eb;
   filter: blur(180px);
-  z-index: 1;
+  z-index: 10;
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -1205,7 +1206,7 @@ body {
   .lines__left-mobile {
     display: block;
     left: 0;
-    top: 22%;
+    top: 15rem;
   }
   .lines__right-mobile {
     display: block;
@@ -1213,7 +1214,7 @@ body {
     top: 30%;
   }
   .lines__right-mobile-services {
-    top: 60%;
+    top: 43rem;
   }
   .lines__right-mobile-about {
     top: 88%;
