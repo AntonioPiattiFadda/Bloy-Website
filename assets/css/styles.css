@@ -78,17 +78,27 @@ body {
   left: 0rem;
   top: 17rem;
 }
-.lines_rigth {
+.lines__right {
   position: absolute;
   right: 0rem;
   bottom: 1rem;
+}
+.lines__left-mobile,
+.lines__right-mobile {
+  position: absolute;
+  display: none;
 }
 
 .metodology__svg--mobile1,
 .metodology__svg--mobile2 {
   display: none;
 }
-
+.mobile_br-services {
+  display: none;
+}
+.desktop_br-services {
+  display: block;
+}
 /*==================== NAV ====================*/
 .header {
   position: fixed;
@@ -238,7 +248,7 @@ body {
 }
 .typedEn,
 .typedEs {
-  padding-left: 1rem;
+  padding-left: 0.3rem;
 }
 .home_typed-container {
   transform: translateY(-5px);
@@ -479,7 +489,7 @@ body {
   }
 }
 
-.lines_rigth-services {
+.lines__right-services {
   top: 39rem;
 }
 
@@ -564,9 +574,7 @@ body {
   padding-bottom: 0;
   padding-top: 4rem;
 }
-.about-us h2 {
-  margin-bottom: 2rem;
-}
+
 .about-us__container {
   width: var(--XL-web-section-width);
   display: flex;
@@ -822,15 +830,19 @@ body {
   width: 500px;
   color: #fff;
   border: none;
+  border-radius: 0%;
   border-bottom: 1px solid #fff;
   font-size: var(--nav-anchor-size);
   margin-bottom: 1rem;
 }
 .contact__form input:focus {
   outline: none;
+  border-radius: 0%;
 }
 
 .contact__input--message {
+  border-radius: 0%;
+
   color: #fff;
   width: 500px;
   font-family: var(--Sagoe);
@@ -1075,6 +1087,12 @@ body {
 /*==================== MEDIA QUERIES ====================*/
 
 @media screen and (max-width: 1600px) and (min-width: 1124px) {
+  .mobile_br-services {
+    display: block;
+  }
+  .desktop_br-services {
+    display: none;
+  }
   .section {
     padding-bottom: 4rem;
   }
@@ -1168,6 +1186,27 @@ body {
 }
 
 @media screen and (max-width: 1124px) {
+  .lines__left,
+  .lines__right {
+    display: none;
+  }
+  .lines__left-mobile {
+    display: block;
+    left: 0;
+    top: 22%;
+  }
+  .lines__right-mobile {
+    display: block;
+    right: 0;
+    top: 30%;
+  }
+  .lines__right-mobile-services {
+    top: 60%;
+  }
+  .lines__right-mobile-about {
+    top: 88%;
+  }
+
   .background__blur {
     display: none;
   }
@@ -1186,7 +1225,7 @@ body {
     width: 79px;
     height: 79px;
   }
-  .home__background-rigth {
+  .home__background-right {
     top: 50%;
     right: 10%;
   }
@@ -1300,7 +1339,7 @@ body {
     scale: 0.5853;
   }
 
-  .lines_rigth-services {
+  .lines__right-services {
     top: 45rem;
   }
   .section {
@@ -1485,7 +1524,7 @@ body {
   .services__right p {
     font-size: var(--description-size-Mobile);
   }
-  .lines_rigth-services {
+  .lines__right-services {
     bottom: -6rem;
   }
   .services__list {

@@ -11,7 +11,7 @@
   },
   "services_data": {
     "services_title": "Nuestros servicios",
-    "services_subtitle": "Que <span class='subtitle__decoration'>servicios</span> <br class='services__subtitle-br-XL'> estamos <br class='services__subtitle-br-L'> ofreciendo.",
+    "services_subtitle": "Qué <span class='subtitle__decoration'>servicios</span> <br class='services__subtitle-br-XL'> estamos <br class='services__subtitle-br-L'> ofreciendo.",
     "services_description": "Ofrecemos servicios que ayudan a tu empresa a mejorar la visibilidad y la reputación de tu negocio, expandiendo el mercado e incrementando valor en los productos digitales.",
     "services_description--ux": "Transformamos ideas en soluciones digitales impactantes a través del diseño UX/UI. Creamos aplicaciones web, móviles o de escritorio que combinan una funcionalidad excepcional con experiencias atractivas e intuitivas. Su visión cobra vida en el mundo digital con nuestro enfoque holístico.",
     "services_description--invest": "Investigación",
@@ -35,18 +35,18 @@
   },
   "about_data": {
     "about_title": "Sobre nosotros",
-    "about_subtitle": "Que nos <br class='about-us__br'><span class='subtitle__decoration'>impulsa</span>.",
+    "about_subtitle": "Qué nos <br class='about-us__br'><span class='subtitle__decoration'>impulsa</span>.",
     "about_description": "Nos propusimos ayudar a las empresas desde dos perspectivas, la primera democratizar la información y convertirlas en data-driven para obtener mejores resultados.<br> La segunda busca mejorar la experiencia de los usuarios con los productos digitales y dar a conocer la importancia que tiene la misma para generar un uso fácil e intuitivo de las aplicaciones. <br> Buscamos responder de manera ágil y eficiente a los desafíos propuestos para construir juntos la solución que mejor se adapte a tu necesidad y así convertirnos en tu mejor aliado tecnológico."
   },
   "contact_data": {
-    "contact_title": "Contacto",
+    "contact_title": "Contáctanos",
     "contact_rectangle": "Nos encantaría <br> saber de ti.",
     "contact_subtitle": "Comencemos a trabajar <br> juntos.",
     "contact_phone": "Teléfono",
     "contact_mail": "Contacto",
     "contact_form--title": "¿Con qué podemos ayudarte?",
     "contact_form--name": "Nombre <span class='contact__obligatorio'>(Obligatorio)</span>",
-    "contact_form--email": "Correo electronico  <span class='contact__obligatorio'>(Obligatorio)</span>",
+    "contact_form--email": "Correo electrónico  <span class='contact__obligatorio'>(Obligatorio)</span>",
     "contact_form--message": "Mensaje <span class='contact__obligatorio'>(Obligatorio)</span>"
   },
   "footer_data": {

@@ -2,7 +2,7 @@
   "nav_data": {
     "nav_home": "Home",
     "nav_services": "Services",
-    "nav_metodology": "Metodology",
+    "nav_metodology": "Methodology",
     "nav_about": "About us",
     "nav_contact": "Contact us"
   },
@@ -11,12 +11,12 @@
   },
   "services_data": {
     "services_title": "Our services",
-    "services_subtitle": "What <span class='subtitle__decoration'>services</span> are  <br> we  <br> offering.",
+    "services_subtitle": "What <span class='subtitle__decoration'>services</span> are  <br class='mobile_br-services'> we  <br class='desktop_br-services'> offering.",
     "services_description": "We offer services that help your company improve the visibility and reputation of your business, expanding the market and increasing the value of digital products.",
     "services_description--ux": "We transform ideas into impactful digital solutions through UX/UI design. We create web, mobile or desktop applications that combine exceptional functionality with attractive and intuitive experiences. Your vision comes to life in the digital world with our holistic approach.",
     "services_description--invest": "Research",
     "services_description--invest--text": "In this first stage of the process we conduct user interviews, surveys, benchmarking, heuristic evaluation and usability testing.",
-    "services_description--Idesign": "Intercative design",
+    "services_description--Idesign": "Interactive design",
     "services_description--Idesign--text": "In this stage we focus on prototyping, user persona, user journey and wireframing.",
     "services_description--Vdesign": "Visual design",
     "services_description--Vdesign--text": "To complete the process, we carry out the design in high fidelity, responsive design and design system.",
@@ -52,6 +52,6 @@
   },
   "footer_data": {
     "footer_title": "Contact us",
-    "footer_social": "Conect with us"
+    "footer_social": "Connect <br> with us"
   }
 }
