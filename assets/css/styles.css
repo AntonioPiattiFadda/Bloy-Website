@@ -1279,7 +1279,7 @@ body {
     text-align: justify;
   }
   .home__title-animation {
-    width: 149px;
+    width: 154px;
     height: 59px;
     transform: translateY(0);
   }
@@ -1916,6 +1916,9 @@ body {
   .contact__input--name,
   .contact__input--email {
     width: 100%;
+    font-size: var(--description-size-small-Mobile);
+  }
+  .contact__obligatorio {
     font-size: var(--description-size-small-Mobile);
   }
   .contact__form textarea {
