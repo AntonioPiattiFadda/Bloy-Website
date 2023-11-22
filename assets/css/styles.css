@@ -1299,7 +1299,7 @@ body {
     text-align: center;
   }
   .home__title-animation {
-    width: 160px;
+    width: 165px;
     height: 59px;
     transform: translateY(0);
   }
@@ -1772,6 +1772,9 @@ body {
     width: var(--mobile-section-width);
     justify-content: space-between;
   }
+  .footer__firstLine--redes div {
+    width: auto;
+  }
   .footer__firstLine--redes div h4 {
     font-size: 1rem;
   }
@@ -1943,9 +1946,6 @@ body {
 
   .footer__firstLine--redes {
     width: var(--small-mobile-section-width);
-  }
-  .footer__firstLine--redes div {
-    width: auto;
   }
 }
 
