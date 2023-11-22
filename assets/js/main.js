@@ -197,6 +197,8 @@ const enTitle = document.getElementById('home_titleEn');
 const esAboutBloy = document.getElementById('about__bloy--es');
 const enAboutBloy = document.getElementById('about__bloy--en');
 
+const homeSubEn = document.getElementById('home_subtitle');
+
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
   const texts = await requestJson.json();
@@ -232,6 +234,8 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       sendButtonEs.classList.remove('disabled');
       sendButtonEn.classList.add('disabled');
+
+      homeSubEn.classList.remove('home__subtitle--en');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -251,6 +255,8 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       sendButtonEs.classList.add('disabled');
       sendButtonEn.classList.remove('disabled');
+
+      homeSubEn.classList.add('home__subtitle--en');
     }
   });
 }
