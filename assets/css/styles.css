@@ -17,7 +17,7 @@
   --subTitle-size-L: 24px;
   --description-size-L: 20px;
 
-  --title-size-Mobile: 32px;
+  --title-size-Mobile: 30px;
   --subTitle-size-Mobile: 16px;
   --description-size-Mobile: 16px;
 
@@ -1217,7 +1217,7 @@ body {
     top: 30%;
   }
   .lines__right-mobile-services {
-    top: 43rem;
+    top: 40rem;
   }
   .lines__right-mobile-about {
     top: 88%;
@@ -1316,7 +1316,7 @@ body {
     text-align: center;
   }
   .home__title-animation {
-    width: 165px;
+    width: 160px;
     height: 59px;
     transform: translateY(0);
   }
@@ -1864,6 +1864,9 @@ body {
 
   .services__list-second-open {
     width: var(--small-mobile-section-width);
+  }
+  .lines__right-mobile-services {
+    top: 43rem;
   }
 
   .metodology p {
