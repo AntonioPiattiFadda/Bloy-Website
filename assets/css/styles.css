@@ -17,7 +17,7 @@
   --subTitle-size-L: 24px;
   --description-size-L: 20px;
 
-  --title-size-Mobile: 30px;
+  --title-size-Mobile: 32px;
   --subTitle-size-Mobile: 16px;
   --description-size-Mobile: 16px;
 
@@ -1280,7 +1280,7 @@ body {
 
   .home__container {
     padding-top: 5rem;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /* Cambia a filas apiladas en lugar de columnas */
     grid-template-columns: none;
     place-items: center;
   }
@@ -1294,10 +1294,9 @@ body {
     width: var(--mobile-section-width);
     align-items: center;
   }
-  /*NOTE - Prueba de animación de título */
   .home_titleEn {
-    /* flex-direction: column;
-    gap: 5px; */
+    flex-direction: column;
+    gap: 5px;
   }
 
   .home__container-left h1 {
@@ -1305,13 +1304,15 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 3rem;
-    text-align: justify;
+    text-align: center;
   }
   .home_titleEn h1 {
-    text-align: left;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 0;
   }
   .home__title-animation {
-    width: 150px;
+    width: 160px;
     height: 59px;
     transform: translateY(0);
   }
@@ -1330,16 +1331,12 @@ body {
   .home__subtitle {
     font-size: var(--nav-anchor-size);
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
   .home__subtitle--en {
-    width: 91.5%;
-    text-align: end;
-  }
-  .home__subtitle--en {
-    /* text-align: center;
-    width: auto; */
+    text-align: center;
+    width: auto;
   }
   .home__container-right {
     width: var(--mobile-section-width);
@@ -1829,28 +1826,10 @@ body {
   .home__container-right {
     width: var(--small-mobile-section-width);
   }
-  .home__container-left h1 {
-    text-align: center;
-  }
 
-  .home__subtitle {
-    text-align: center;
-  }
   .home__container-right {
     width: var(--small-mobile-section-width);
   }
-  .home_titleEn {
-    flex-direction: column;
-    gap: 5px;
-  }
-  .home_titleEn h1 {
-    text-align: center;
-  }
-  .home__subtitle--en {
-    text-align: center;
-    width: auto;
-  }
-
   .services__container {
     width: var(--small-mobile-section-width);
   }
