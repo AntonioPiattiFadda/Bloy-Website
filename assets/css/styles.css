@@ -1303,7 +1303,7 @@ body {
     font-size: var(--title-size-Mobile);
     font-style: normal;
     font-weight: 600;
-    line-height: 3rem;
+    line-height: 4rem;
     text-align: center;
   }
   .home_titleEn h1 {
@@ -1322,11 +1322,9 @@ body {
     right: -5.5px;
     top: -5.5px;
   }
-  .home_typed-container {
-    transform: translateX(0);
-  }
+
   .home__title-decoration {
-    top: -7.5px;
+    top: -1.5px;
   }
   .home__subtitle {
     font-size: var(--nav-anchor-size);
