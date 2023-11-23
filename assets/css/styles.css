@@ -1314,7 +1314,7 @@ body {
   .home__title-animation {
     width: 160px;
     height: 59px;
-    transform: translateY(0);
+    transform: translateY(5px);
   }
   .home__title-decoration {
     height: 9px;
