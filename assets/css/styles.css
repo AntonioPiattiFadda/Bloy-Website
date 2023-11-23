@@ -21,7 +21,7 @@
   --subTitle-size-Mobile: 16px;
   --description-size-Mobile: 16px;
 
-  --description-size-small-Mobile: 13px;
+  --description-size-small-Mobile: 16px;
 
   /* Font family */
   --Sagoe: 'Segoe UI', Arial, sans-serif;
@@ -429,14 +429,16 @@ body {
   overflow: hidden;
   opacity: 0;
   padding-top: 0;
-  transition: max-height 1s linear, opacity 1s linear, padding-top 1s linear;
+  transition: max-height 1s linear, opacity 1s linear, padding-top 1s linear,
+    padding-bottom 1s linear;
 }
 .services__list-second-open {
   padding-top: 2rem;
   opacity: 1;
   height: auto;
   max-height: 800px;
-  transition: max-height 1s linear, opacity 1s linear, padding-top 1s linear;
+  transition: max-height 1s linear, opacity 1s linear, padding-top 1s linear,
+    padding-bottom 1s linear;
 }
 
 .services__list-second div {
@@ -1568,6 +1570,7 @@ body {
   }
   .services__list-container {
     width: var(--mobile-section-width);
+    padding-bottom: 0;
   }
   .services__list-second {
     display: flex;
@@ -1583,6 +1586,7 @@ body {
     width: var(--mobile-section-width);
     height: auto;
     max-height: 580px;
+    padding-bottom: 2rem;
   }
   .services__list-second div h4 {
     font-size: var(--description-size-L);
@@ -1917,7 +1921,7 @@ body {
   }
   .contact__firstline p {
     width: 90%;
-    font-size: 19px;
+    font-size: var(--description-size-L);
   }
   .contact__secondline .contact__form {
     width: 90%;
@@ -1926,7 +1930,7 @@ body {
     font-size: var(--description-size-small-Mobile);
   }
   .contact__form p {
-    font-size: var(--nav-anchor-size);
+    font-size: var(--description-size-L);
   }
   .mycheck {
     width: 20px;
