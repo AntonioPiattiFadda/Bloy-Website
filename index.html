@@ -4,6 +4,7 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0YC5FT98W"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-E0YC5FT98W'); </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aquí va tu metadescripción: un resumen breve y relevante del contenido de la página.">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="/assets/css/styles.css">
         <link rel="icon" type="image/png" href="./assets/img/favicon.svg">
@@ -16,22 +17,22 @@
             <div class="navbar__menu--list">
               <ul>
                 <li>
-                  <a class="nav__link" data-section="nav_data" data-value="nav_home" id="menu__mobile--anchor" href="#home">Inicio</a>
+                  <a aria-label="Navega al home" class="nav__link" data-section="nav_data" data-value="nav_home" id="menu__mobile--anchor" href="#home">Inicio</a>
                   </li>
                 <li>
-                  <a class="nav__link" data-section="nav_data" data-value="nav_services" id="menu__mobile--anchor" href="#services">Servicios</a>
+                  <a aria-label="Navega a servicios" class="nav__link" data-section="nav_data" data-value="nav_services" id="menu__mobile--anchor" href="#services">Servicios</a>
                   </li>
                 <li>
-                  <a class="nav__link" data-section="nav_data" data-value="nav_metodology" id="menu__mobile--anchor" href="#metodology">Metodología</a>
+                  <a aria-label="Navega a metodologia" class="nav__link" data-section="nav_data" data-value="nav_metodology" id="menu__mobile--anchor" href="#metodology">Metodología</a>
                 </li>
                 <li>
-                  <a class="nav__link" data-section="nav_data" data-value="nav_about" id="menu__mobile--anchor"  href="#about-us">Nosotros</a>
+                  <a aria-label="Navega a sobre nosotros" class="nav__link" data-section="nav_data" data-value="nav_about" id="menu__mobile--anchor"  href="#about-us">Nosotros</a>
                 </li>
               </ul>
             </div>
             <div class="navbar__buttons--mobile">
               <ul>
-                <li class="nav__li--contact"><button class="nav__link navbar__menu--button navbar__buttons--contact"> <a data-section="nav_data" data-value="nav_contact" id="menu__mobile--anchor" href="#contact">Contáctanos</a></button></li>
+                <li class="nav__li--contact"><button name="button than drives you to the contact form" class="nav__link navbar__menu--button navbar__buttons--contact"> <a aria-label="Navega a sobre contacto" data-section="nav_data" data-value="nav_contact" id="menu__mobile--anchor" href="#contact">Contáctanos</a></button></li>
                 <div class="navbar__buttons--lang">
                   <li><button name="spanish traduction button" class="navbar__menu--button traductionBtn nav__flags navbar__languague--selected traductionBtn-es"   data-language="es" class="nav__flags">ES</button></li>
                   <li><button name="english traduction button" class=" navbar__menu--button traductionBtn nav__flags traductionBtn-en" data-language="en" class="nav__flags">EN</button></li>
@@ -40,31 +41,31 @@
             </div>
           </div>
             <nav class="navbar">
-              <a href="#home" class="logo">              
+              <a aria-label="navega al home" href="#home" class="logo">              
                 <img width="44" height="54" class="logo" src="./assets/img/logo-1.png" /> 
               </a>
                     
                     <div class="navbar__menu">
                       <ul>
                         <li>
-                          <a data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
+                          <a aria-label="Navega al inicio" data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
                           </li>
                         <li>
-                          <a data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
+                          <a aria-label="Navega a servicios" data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
                           </li>
                         <li>
-                          <a data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
+                          <a aria-label="Navega a metogología" data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
                         </li>
                         <li>
-                          <a data-section="nav_data" data-value="nav_about" href="#about-us">Nosotros</a>
+                          <a  aria-label="Navega a sobre nosotros" data-section="nav_data" data-value="nav_about" href="#about-us">Nosotros</a>
                         </li>
                       </ul>
                     </div>
                     <div class="navbar__buttons">
                       <ul>
-                        <li><button class="navbar__menu--button navbar__buttons--contact"> <a data-section="nav_data" data-value="nav_contact" href="#contact">Contáctanos</a></button></li>
-                        <li><button class="navbar__menu--button traductionBtn traductionBtn-es  navbar__languague--selected"   data-language="es">ES</button></li>
-                        <li><button class="navbar__menu--button traductionBtn traductionBtn-en" data-language="en">EN</button></li>
+                        <li><button name="button than drives you to the contact form" class="navbar__menu--button navbar__buttons--contact"> <a aria-label="Navega a contactanos" data-section="nav_data" data-value="nav_contact" href="#contact">Contáctanos</a></button></li>
+                        <li><button name="spanish traduction button"  class="navbar__menu--button traductionBtn traductionBtn-es  navbar__languague--selected"   data-language="es">ES</button></li>
+                        <li><button name="english traduction button" class="navbar__menu--button traductionBtn traductionBtn-en" data-language="en">EN</button></li>
                       </ul>
                     </div>
 
@@ -77,8 +78,8 @@
         <main class="main">
             <section class="home__section section" id="home">
               <div class="home__background home__background-left background__blur"></div>
-              <img width="229" height="379" class="background__blur-mobile background__blur-mobile--left" src="./assets/img/background__left--home.svg" alt="">
-              <img width="229" height="379" class="background__blur-mobile background__blur-mobile--rigth" src="./assets/img/background__rigth--home.svg" alt="">
+              <img width="229" height="379" class="background__blur-mobile background__blur-mobile--left" src="./assets/img/background__left--home.svg" alt="Degrade de imagen de fondo">
+              <img width="229" height="379" class="background__blur-mobile background__blur-mobile--rigth" src="./assets/img/background__rigth--home.svg" alt="Degrade de imagen de fondo">
                 <div class="home__container">
                     <div class="home__container-left">
                     
@@ -113,10 +114,10 @@
     
             <section class="services section" id="services">
                   <h2 data-section="services_data" data-value="services_title" class="section__title services_title">Nuestros servicios</h2>
-                  <img width="228" height="26" src="./assets/img/Lines left.svg" class="lines__left" alt="">
-                  <img width="228" height="26" src="./assets/img/Lines right.svg" class="lines__right lines__right-services" alt="">
-                  <img width="123" height="26" src="./assets/img/lines-left-mobile.svg" class="lines__left-mobile" alt="">
-                  <img width="123" height="26" src="./assets/img/lines-right-mobile.svg" class="lines__right-mobile lines__right-mobile-services" alt="">
+                  <img width="228" height="26" src="./assets/img/Lines left.svg" class="lines__left" alt="Lineas decorativas">
+                  <img width="228" height="26" src="./assets/img/Lines right.svg" class="lines__right lines__right-services" alt="Lineas decorativas">
+                  <img width="123" height="26" src="./assets/img/lines-left-mobile.svg" class="lines__left-mobile" alt="Lineas decorativas">
+                  <img width="123" height="26" src="./assets/img/lines-right-mobile.svg" class="lines__right-mobile lines__right-mobile-services" alt="Lineas decorativas">
                   <div class="services__container">
                   
 
@@ -182,7 +183,7 @@
               <h2 data-section="metodology_data" data-value="metodology_title" class="section__title metodology_title">Nuestra metodología de trabajo</h2>
               <p class="metodology__subtitle" data-section="metodology_data" data-value="metodology_subtitle">Aplicamos Agile, Design Thinking y Lean <br class="mobile_br"> para llevar a cabo nuestro trabajo.</p>
               <div class="metodology__container">
-                <img width="394" height="341" class="metodology__svg--mobile2" src="./assets/img/metodologia-grafico-mobile.svg" alt="">
+                <img width="394" height="341" class="metodology__svg--mobile2" src="./assets/img/metodologia-grafico-mobile.svg" alt="grafico Lean, agile, design thinking">
                 <div class="metodology__information">
                  <div>
                   <h4 class="metodology__title--first">AGILE</h4>
@@ -198,7 +199,7 @@
                  </div>
                  </div>
                  
-                 <img width="619" height="535" class="metodology__svg--web" src="./assets/img/metodologia-grafico-web.svg" alt="">
+                 <img width="619" height="535" class="metodology__svg--web" src="./assets/img/metodologia-grafico-web.svg" alt="grafico Lean, agile, design thinking">
 
                 <div class="metodology__background"></div>
               </div>
@@ -206,10 +207,10 @@
     
             <section class="about-us section " id="about-us">
               <h2 data-section="about_data" data-value="about_title" class="section__title">Sobre nosotros</h2>
-              <img width="228" height="26" src="./assets/img/Lines left.svg" class="lines__left" alt="">
-              <img width="228" height="26" src="./assets/img/Lines right.svg" class="lines__right" alt="">
-              <img width="123" height="26" src="./assets/img/lines-left-mobile.svg" class="lines__left-mobile" alt="">
-              <img width="123" height="26" src="./assets/img/lines-right-mobile.svg" class="lines__right-mobile lines__right-mobile-about" alt="">
+              <img width="228" height="26" src="./assets/img/Lines left.svg" class="lines__left" alt="Lineas decorativas">
+              <img width="228" height="26" src="./assets/img/Lines right.svg" class="lines__right" alt="Lineas decorativas">
+              <img width="123" height="26" src="./assets/img/lines-left-mobile.svg" class="lines__left-mobile" alt="Lineas decorativas">
+              <img width="123" height="26" src="./assets/img/lines-right-mobile.svg" class="lines__right-mobile lines__right-mobile-about" alt="Lineas decorativas">
               <div class="about-us__container">
                 <div class="about-us__left">
                   <h2 data-section="about_data" data-value="about_subtitle" class="section__title">Qué nos <br class='about-us__br'><span class="subtitle__decoration">impulsa</span>.</h2>
@@ -221,8 +222,8 @@
                     </p>
                 </div>
                 <div class="about-us__right">
-                  <img width="519" height="323" class="disabled about__bloy" id="about__bloy--en" src="./assets/img/bloy_about.svg" alt="">
-                  <img width="375" height="225" id="about__bloy--es" class="about__bloy" src="./assets/img/Frame 172.png" alt="">
+                  <img width="519" height="323" class="disabled about__bloy" id="about__bloy--en" src="./assets/img/bloy_about.svg" alt="Logo bloy">
+                  <img width="375" height="225" id="about__bloy--es" class="about__bloy" src="./assets/img/Frame 172.png" alt="Logo bloy">
                   <div class="about-us__background background__blur"></div>
                 </div>
               </div>
@@ -235,8 +236,8 @@
               <div class="contact__container">
                 <div class="contact__firstline">
                   <div class="contact__rectangle"> 
-                    <h4 data-section="contact_data" data-value="contact_rectangle" >Nos encantaría <br> saber
-                    de ti.</h4>
+                    <h5 data-section="contact_data" data-value="contact_rectangle" >Nos encantaría <br> saber
+                    de ti.</h5>
                   </div>
                  
                   <p data-section="contact_data" data-value="contact_subtitle">Comencemos a trabajar <br> juntos.</br>
@@ -260,28 +261,28 @@
 
                     <div class="contact__checkboxes">
                       <div>
-                        <input class="mycheck" name="data" type="checkbox" > <label class="contact__label--data" for="mycheck">Data & Analytics</label>
+                        <input class="mycheck" name="data" type="checkbox" id="Data" > <label for="Data" class="contact__label--data" for="mycheck">Data & Analytics</label>
                         <span></span>
                       </div>
                       <div>
-                        <input class="mycheck" name="ux" type="checkbox" > <label class="contact__label--ux" for="mycheck2">UX/UI Designer</label>
+                        <input class="mycheck" name="ux" type="checkbox" id="UX" > <label form="UX" class="contact__label--ux" for="mycheck2">UX/UI Designer</label>
                         <span></span>
 
                       </div>
                     </div>
 
-                    <label class="contact__label--name" data-section="contact_data" data-value="contact_form--name" for="name">Nombre <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <label for="name__input" class="contact__label--name" data-section="contact_data" data-value="contact_form--name" for="name">Nombre <span class="contact__obligatorio">(Obligatorio)</span></label>
                     <input id="name__input" placeholder="Ingrese su nombre" class="contact__input--name" type="text" name="name" id="name">
-                    <label class="contact__label--email" data-section="contact_data" data-value="contact_form--email" for="name">Correo electrónico  <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <label for="email__input" class="contact__label--email" data-section="contact_data" data-value="contact_form--email" for="name">Correo electrónico  <span class="contact__obligatorio">(Obligatorio)</span></label>
                     <input id="email__input" placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email" id="email">
-                    <label class="contact__label--message" data-section="contact_data" data-value="contact_form--message" for="name">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <label for="message__input" class="contact__label--message" data-section="contact_data" data-value="contact_form--message" for="name">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
                     <textarea  id="message__input" placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" id="message" cols="30" rows="10"></textarea>
                     <div class="contact__button-container">
                       <div id="error__message" class="error__message"></div>
                       <div class="modal" id="mensajeEnviadoModal">
                       </div>
-                      <button class="contact__form--button--es" id="send--button--es"></button>
-                      <button class="contact__form--button--en disabled" id="send--button--en"></button>
+                      <button name="enviar informacion" class="contact__form--button--es" id="send--button--es"></button>
+                      <button name="send information button" class="contact__form--button--en disabled" id="send--button--en"></button>
                   </div>
                   
                    
@@ -307,38 +308,38 @@
           </div>
           <div class="footer__container">
             <div class="footer__firstLine">
-              <a href="#home">              
-                <img width="129" height="159" class="footer__bloy--icon" src="./assets//img/BloyIcon.svg" alt="">
+              <a aria-label="Navega al inicio" href="#home">              
+                <img width="129" height="159" class="footer__bloy--icon" src="./assets//img/BloyIcon.svg" alt="Logo Bloy">
               </a>
               <div class="footer__firstLine--redes">
                 <div>
                   <h4>BLOY</h4>
                   <ul>
                     <li>
-                      <a data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
+                      <a aria-label="Navega a sercicios" data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
                       </li>
                     <li>
-                      <a data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
+                      <a aria-label="Navega a servicios" data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
                       </li>
                     <li>
-                      <a data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
+                      <a aria-label="Navega a metodologia" data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
                     </li>
                     <li>
-                      <a data-section="nav_data" data-value="nav_about" href="#about-us">Sobre nosotros</a>
+                      <a aria-label="Navega a sobre nosotros" data-section="nav_data" data-value="nav_about" href="#about-us">Sobre nosotros</a>
                     </li>
                   </ul>
                 </div>
                 <div>
                   <h4 data-section="footer_data" data-value="footer_title">Contáctanos</h4>
                   <ul>
-                    <li class="footer__contact--icons"> <a href="https://wa.me/5493548513070?text=Hello%20Bloy!%20I..." target="_blank" rel="noopener noreferrer"><img src="./assets//img/phone.svg" alt=""> +54 348513070</a></li>
-                    <li class="footer__contact--icons"><a target="_blank" href="mailto:contacto@bloy.tech"> <img width="24" height="24" src="./assets//img/email.svg" alt=""> contacto@bloy.tech</a></li>
+                    <li class="footer__contact--icons"> <a aria-label="Enviar mensaje de whatsapp" href="https://wa.me/5493548513070?text=Hello%20Bloy!%20I..." target="_blank" rel="noopener noreferrer"><img src="./assets//img/phone.svg" alt="Contacto telefónico"> +54 348513070</a></li>
+                    <li class="footer__contact--icons"><a aria-label="Enviar email" target="_blank" href="mailto:contacto@bloy.tech"> <img width="24" height="24" src="./assets//img/email.svg" alt="Enviar mail"> contacto@bloy.tech</a></li>
                   </ul>
                 </div>
                 <div>
                   <h4 data-section="footer_data" data-value="footer_social">Redes</h4>
                   <ul>
-                    <li  class="footer__contact--icons"> <a href="http://www.linkedin.com/company/bloyy/?originalSubdomain=ar" target="_blank" rel="noopener noreferrer"><img width="24" height="25" src="./assets//img/Linkedin.svg" alt=""> Bloy</a></li>
+                    <li  class="footer__contact--icons"> <a aria-label="Ir al linkedin de bloy" href="http://www.linkedin.com/company/bloyy/?originalSubdomain=ar" target="_blank" rel="noopener noreferrer"><img width="24" height="25" src="./assets//img/Linkedin.svg" alt="Sitio web linkedin"> Bloy</a></li>
                   </ul>
                 </div>
               </div>
