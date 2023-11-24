@@ -83,7 +83,7 @@ const messageInput = document.getElementById('message__input');
 
 function validarFormulario(language) {
   var errorMessage = document.getElementById('error__message');
-  let nameError = 'Por favor ingrese su nombre';
+  let nameError = 'Por favor rellena los campos';
   let emailError = 'Por favor ingrese su email';
   let messageError = 'Por favor ingrese su mensaje';
 
@@ -101,8 +101,8 @@ function validarFormulario(language) {
       errorMessage.innerHTML = '';
       nameInput.classList.remove('error');
     }, 2000);
-    return;
-  } else if (emailInput.value === '') {
+  }
+  if (emailInput.value === '') {
     errorMessage.innerHTML = emailError;
     emailInput.focus();
     emailInput.classList.add('error');
@@ -110,8 +110,8 @@ function validarFormulario(language) {
       errorMessage.innerHTML = '';
       emailInput.classList.remove('error');
     }, 2000);
-    return;
-  } else if (messageInput.value === '') {
+  }
+  if (messageInput.value === '') {
     errorMessage.innerHTML = messageError;
     messageInput.focus();
     messageInput.classList.add('error');
@@ -119,8 +119,13 @@ function validarFormulario(language) {
       errorMessage.innerHTML = '';
       messageInput.classList.remove('error');
     }, 2000);
-
-    return;
+    if (
+      nameInput.value === '' ||
+      emailInput.value === '' ||
+      messageInput.value === ''
+    ) {
+      return;
+    }
   }
   return 'OK';
 }
@@ -238,6 +243,8 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       homeSubEn.classList.add('disabled');
       homeSubEs.classList.remove('disabled');
+
+      
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
