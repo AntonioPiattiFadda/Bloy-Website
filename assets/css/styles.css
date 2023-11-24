@@ -672,7 +672,7 @@ body {
   width: 366px;
   margin-bottom: 2rem;
 }
-.contact__rectangle h5 {
+.contact__rectangle p {
   text-align: start;
   color: #fff;
   font-family: var(--Sagoe);
@@ -1692,7 +1692,7 @@ body {
     width: 100%;
     margin-top: 1rem;
   }
-  .contact__rectangle h5 {
+  .contact__rectangle p {
     font-size: var(--title-size-Mobile);
   }
   .contact__firstline p {
@@ -1897,7 +1897,7 @@ body {
   .contact__rectangle {
     width: 90%;
   }
-  .contact__rectangle h5 {
+  .contact__rectangle p {
     font-size: 26px;
   }
   .contact__firstline {

@@ -17,16 +17,16 @@
             <div class="navbar__menu--list">
               <ul>
                 <li>
-                  <a aria-label="Navega al home" class="nav__link" data-section="nav_data" data-value="nav_home" id="menu__mobile--anchor" href="#home">Inicio</a>
+                  <a aria-label="Inicio" class="nav__link" data-section="nav_data" data-value="nav_home" id="menu__mobile--anchor" href="#home">Inicio</a>
                   </li>
                 <li>
-                  <a aria-label="Navega a servicios" class="nav__link" data-section="nav_data" data-value="nav_services" id="menu__mobile--anchor" href="#services">Servicios</a>
+                  <a aria-label="Servicios" class="nav__link" data-section="nav_data" data-value="nav_services" id="menu__mobile--anchor" href="#services">Servicios</a>
                   </li>
                 <li>
-                  <a aria-label="Navega a metodologia" class="nav__link" data-section="nav_data" data-value="nav_metodology" id="menu__mobile--anchor" href="#metodology">Metodología</a>
+                  <a aria-label="Metodología" class="nav__link" data-section="nav_data" data-value="nav_metodology" id="menu__mobile--anchor" href="#metodology">Metodología</a>
                 </li>
                 <li>
-                  <a aria-label="Navega a sobre nosotros" class="nav__link" data-section="nav_data" data-value="nav_about" id="menu__mobile--anchor"  href="#about-us">Nosotros</a>
+                  <a aria-label="Nosotros" class="nav__link" data-section="nav_data" data-value="nav_about" id="menu__mobile--anchor"  href="#about-us">Nosotros</a>
                 </li>
               </ul>
             </div>
@@ -34,36 +34,38 @@
               <ul>
                 <li class="nav__li--contact"><button name="button than drives you to the contact form" class="nav__link navbar__menu--button navbar__buttons--contact"> <a aria-label="Navega a sobre contacto" data-section="nav_data" data-value="nav_contact" id="menu__mobile--anchor" href="#contact">Contáctanos</a></button></li>
                 <div class="navbar__buttons--lang">
-                  <li><button name="spanish traduction button" class="navbar__menu--button traductionBtn nav__flags navbar__languague--selected traductionBtn-es"   data-language="es" class="nav__flags">ES</button></li>
-                  <li><button name="english traduction button" class=" navbar__menu--button traductionBtn nav__flags traductionBtn-en" data-language="en" class="nav__flags">EN</button></li>
+                  <ul class="navbar__buttons--lang">
+                    <li><button name="spanish traduction button" class="navbar__menu--button traductionBtn nav__flags navbar__languague--selected traductionBtn-es"   data-language="es" class="nav__flags">ES</button></li>
+                    <li><button name="english traduction button" class=" navbar__menu--button traductionBtn nav__flags traductionBtn-en" data-language="en" class="nav__flags">EN</button></li>
+                  </ul>
                 </div>
               </ul>
             </div>
           </div>
             <nav class="navbar">
-              <a aria-label="navega al home" href="#home" class="logo">              
-                <img width="44" height="54" class="logo" src="./assets/img/logo-1.png" /> 
+              <a aria-label="Home" href="#home" class="logo">              
+                <img width="44" height="54" class="logo" src="./assets/img/logo-1.png" alt="Logo bloy"/> 
               </a>
                     
                     <div class="navbar__menu">
                       <ul>
                         <li>
-                          <a aria-label="Navega al inicio" data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
+                          <a aria-label="Inicio" data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
                           </li>
                         <li>
-                          <a aria-label="Navega a servicios" data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
+                          <a aria-label="Servicios" data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
                           </li>
                         <li>
-                          <a aria-label="Navega a metogología" data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
+                          <a aria-label="Metodología" data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
                         </li>
                         <li>
-                          <a  aria-label="Navega a sobre nosotros" data-section="nav_data" data-value="nav_about" href="#about-us">Nosotros</a>
+                          <a  aria-label="Nosotros" data-section="nav_data" data-value="nav_about" href="#about-us">Nosotros</a>
                         </li>
                       </ul>
                     </div>
                     <div class="navbar__buttons">
                       <ul>
-                        <li><button name="button than drives you to the contact form" class="navbar__menu--button navbar__buttons--contact"> <a aria-label="Navega a contactanos" data-section="nav_data" data-value="nav_contact" href="#contact">Contáctanos</a></button></li>
+                        <li><button name="button than drives you to the contact form" class="navbar__menu--button navbar__buttons--contact"> <a aria-label="Contáctanos" data-section="nav_data" data-value="nav_contact" href="#contact">Contáctanos</a></button></li>
                         <li><button name="spanish traduction button"  class="navbar__menu--button traductionBtn traductionBtn-es  navbar__languague--selected"   data-language="es">ES</button></li>
                         <li><button name="english traduction button" class="navbar__menu--button traductionBtn traductionBtn-en" data-language="en">EN</button></li>
                       </ul>
@@ -236,8 +238,8 @@
               <div class="contact__container">
                 <div class="contact__firstline">
                   <div class="contact__rectangle"> 
-                    <h5 data-section="contact_data" data-value="contact_rectangle" >Nos encantaría <br> saber
-                    de ti.</h5>
+                    <p data-section="contact_data" data-value="contact_rectangle" >Nos encantaría <br> saber
+                    de ti.</p>
                   </div>
                  
                   <p data-section="contact_data" data-value="contact_subtitle">Comencemos a trabajar <br> juntos.</br>
@@ -261,11 +263,11 @@
 
                     <div class="contact__checkboxes">
                       <div>
-                        <input class="mycheck" name="data" type="checkbox" id="Data" > <label for="Data" class="contact__label--data" for="mycheck">Data & Analytics</label>
+                        <label for="Data" class="contact__label--data" for="mycheck"> <input class="mycheck" name="data" type="checkbox" id="Data" >  Data & Analytics</label>
                         <span></span>
                       </div>
                       <div>
-                        <input class="mycheck" name="ux" type="checkbox" id="UX" > <label form="UX" class="contact__label--ux" for="mycheck2">UX/UI Designer</label>
+                         <label form="UX" class="contact__label--ux" for="mycheck2"> <input class="mycheck" name="ux" type="checkbox" id="UX" > UX/UI Designer</label>
                         <span></span>
 
                       </div>
@@ -308,7 +310,7 @@
           </div>
           <div class="footer__container">
             <div class="footer__firstLine">
-              <a aria-label="Navega al inicio" href="#home">              
+              <a aria-label="Inicio" href="#home">              
                 <img width="129" height="159" class="footer__bloy--icon" src="./assets//img/BloyIcon.svg" alt="Logo Bloy">
               </a>
               <div class="footer__firstLine--redes">
@@ -316,23 +318,23 @@
                   <h4>BLOY</h4>
                   <ul>
                     <li>
-                      <a aria-label="Navega a sercicios" data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
+                      <a aria-label="Inicio" data-section="nav_data" data-value="nav_home" href="#home">Inicio</a>
                       </li>
                     <li>
-                      <a aria-label="Navega a servicios" data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
+                      <a aria-label="Servicios" data-section="nav_data" data-value="nav_services" href="#services">Servicios</a>
                       </li>
                     <li>
-                      <a aria-label="Navega a metodologia" data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
+                      <a aria-label="Metodología" data-section="nav_data" data-value="nav_metodology" href="#metodology">Metodología</a>
                     </li>
                     <li>
-                      <a aria-label="Navega a sobre nosotros" data-section="nav_data" data-value="nav_about" href="#about-us">Sobre nosotros</a>
+                      <a aria-label="Sobre nosotros" data-section="nav_data" data-value="nav_about" href="#about-us">Sobre nosotros</a>
                     </li>
                   </ul>
                 </div>
                 <div>
                   <h4 data-section="footer_data" data-value="footer_title">Contáctanos</h4>
                   <ul>
-                    <li class="footer__contact--icons"> <a aria-label="Enviar mensaje de whatsapp" href="https://wa.me/5493548513070?text=Hello%20Bloy!%20I..." target="_blank" rel="noopener noreferrer"><img src="./assets//img/phone.svg" alt="Contacto telefónico"> +54 348513070</a></li>
+                    <li class="footer__contact--icons"> <a aria-label="Enviar mensaje de whatsapp" href="https://wa.me/5493548513070?text=Hello%20Bloy!%20I..." target="_blank" rel="noopener noreferrer"><img width="24" height="24" src="./assets//img/phone.svg" alt="Contacto telefónico"> +54 348513070</a></li>
                     <li class="footer__contact--icons"><a aria-label="Enviar email" target="_blank" href="mailto:contacto@bloy.tech"> <img width="24" height="24" src="./assets//img/email.svg" alt="Enviar mail"> contacto@bloy.tech</a></li>
                   </ul>
                 </div>
