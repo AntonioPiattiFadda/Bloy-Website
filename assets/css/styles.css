@@ -448,7 +448,7 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
-.services__list-second div h4 {
+.services__list-second div span {
   color: #f9a826;
   font-family: var(--Sagoe);
   font-size: var(--subTitle-size-XL);
@@ -462,7 +462,7 @@ body {
   width: 90%;
   font-size: var(--description-size-XL);
 }
-.services__list-second div h4::after {
+.services__list-second div span::after {
   content: '';
   width: 3rem;
   height: 0.3rem;
@@ -1032,7 +1032,7 @@ body {
   height: 12rem;
   width: 250px;
 }
-.footer__firstLine--redes div h4 {
+.footer__firstLine--redes div span {
   color: #fff;
   font-family: var(--Sagoe);
   font-size: var(--subTitle-size-XL);
@@ -1585,7 +1585,7 @@ body {
     max-height: 580px;
     padding-bottom: 2rem;
   }
-  .services__list-second div h4 {
+  .services__list-second div span {
     font-size: var(--description-size-L);
   }
   .services__list-second div p {
@@ -1795,7 +1795,7 @@ body {
   .footer__firstLine--redes div {
     width: auto;
   }
-  .footer__firstLine--redes div h4 {
+  .footer__firstLine--redes div span {
     font-size: 1rem;
   }
 
