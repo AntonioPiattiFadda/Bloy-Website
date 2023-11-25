@@ -244,7 +244,7 @@ for (let i = 0; i < traductionBtn.length; i++) {
       homeSubEn.classList.add('disabled');
       homeSubEs.classList.remove('disabled');
 
-      
+      navMenu.classList.remove('show-menu');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -267,6 +267,8 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       homeSubEn.classList.remove('disabled');
       homeSubEs.classList.add('disabled');
+
+      navMenu.classList.remove('show-menu');
     }
   });
 }
