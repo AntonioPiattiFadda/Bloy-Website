@@ -83,14 +83,14 @@ const messageInput = document.getElementById('message__input');
 
 function validarFormulario(language) {
   var errorMessage = document.getElementById('error__message');
-  let nameError = 'Por favor rellena los campos';
-  let emailError = 'Por favor ingrese su email';
-  let messageError = 'Por favor ingrese su mensaje';
+  let nameError = 'Por favor rellena los datos faltantes';
+  let emailError = 'Por favor rellena los datos faltantes';
+  let messageError = 'Por favor rellena los datos faltantes';
 
   if (language === 'en') {
-    nameError = 'Please enter your name';
-    emailError = 'Please enter your email';
-    messageError = 'Please enter your message';
+    nameError = 'Please fill in the missing data';
+    emailError = 'Please fill in the missing data';
+    messageError = 'Please fill in the missing data';
   }
 
   if (nameInput.value === '') {
@@ -245,6 +245,7 @@ for (let i = 0; i < traductionBtn.length; i++) {
       homeSubEs.classList.remove('disabled');
 
       navMenu.classList.remove('show-menu');
+      navToogle.classList.remove('show-menu-icon');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -269,6 +270,7 @@ for (let i = 0; i < traductionBtn.length; i++) {
       homeSubEs.classList.add('disabled');
 
       navMenu.classList.remove('show-menu');
+      navToogle.classList.remove('show-menu-icon');
     }
   });
 }
