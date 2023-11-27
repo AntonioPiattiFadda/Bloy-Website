@@ -102,6 +102,26 @@ body {
 .background__blur-mobile {
   display: none;
 }
+.background__blur-desktop {
+  position: absolute;
+  z-index: 500;
+}
+.background__blur-desktop--left {
+  top: 0;
+  left: 0;
+}
+.background__blur-desktop--rigth {
+  bottom: 0;
+  right: 0;
+}
+.background__blur-desktop-1366 {
+  display: none;
+}
+.background__blur-desktop-mobile {
+  position: absolute;
+  z-index: 500;
+  display: none;
+}
 /*==================== NAV ====================*/
 .header {
   position: fixed;
@@ -579,6 +599,10 @@ body {
   left: 1rem;
   top: 1rem;
 }
+.background__blur-methodology--left {
+  left: 0;
+  bottom: 10%;
+}
 
 /*==================== ABOUT US ====================*/
 .about-us {
@@ -599,7 +623,7 @@ body {
   padding: 10rem 0 5rem 0;
 }
 .about-us__left {
-  width: 800px;
+  width: 1025px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -632,7 +656,10 @@ body {
   right: 1rem;
   top: 1rem;
 }
-
+.background__blur-about--rigth {
+  right: 0;
+  bottom: 10%;
+}
 /*==================== CONTACT ME ====================*/
 .contact {
   display: flex;
@@ -994,6 +1021,11 @@ body {
 .error__message p {
   color: red;
 }
+.background__blur-contact--left {
+  left: 0;
+  bottom: 10%;
+}
+
 /*==================== FOOTER ====================*/
 .footer__blur--line {
   width: 100vw;
@@ -1032,6 +1064,9 @@ body {
 .footer__firstLine--redes div {
   height: 12rem;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .footer__firstLine--redes div span {
   color: #fff;
@@ -1087,6 +1122,10 @@ body {
 .footer__contact--icons {
   cursor: pointer;
 }
+.background__blur-footer--rigth {
+  bottom: 0;
+  right: 0;
+}
 
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
@@ -1108,6 +1147,25 @@ body {
   }
   .desktop_br-services {
     display: none;
+  }
+  .background__blur-desktop {
+    display: none;
+  }
+  .background__blur-desktop-1366 {
+    position: absolute;
+    display: block;
+    z-index: 500;
+  }
+  .background__blur-desktop--left {
+    top: 0;
+    left: 0;
+  }
+  .background__blur-desktop--rigth {
+    bottom: 0;
+    right: 0;
+  }
+  .background__blur-about--rigth {
+    display: block;
   }
   .section {
     padding-bottom: 4rem;
@@ -1200,12 +1258,30 @@ body {
   .contact__rectangle {
     width: 350px;
   }
+  .background__blur-contact--left {
+    display: none;
+  }
   .footer__bloy--icon {
     margin-right: 6rem;
+  }
+  .background__blur-footer--rigth {
+    display: block;
   }
 }
 
 @media screen and (max-width: 1124px) {
+  .background__blur-desktop-mobile {
+    display: block;
+  }
+  .background__blur-methodology--left {
+    top: 0;
+  }
+  .background__blur-desktop {
+    display: none;
+  }
+  .background__blur-about--rigth {
+    display: none;
+  }
   .lines__left,
   .lines__right {
     display: none;

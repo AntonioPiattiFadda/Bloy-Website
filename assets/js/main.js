@@ -199,9 +199,6 @@ const textsToChange = document.querySelectorAll('[data-section]');
 const esTitle = document.getElementById('home_titleEs');
 const enTitle = document.getElementById('home_titleEn');
 
-const esAboutBloy = document.getElementById('about__bloy--es');
-const enAboutBloy = document.getElementById('about__bloy--en');
-
 const homeSubEn = document.getElementById('home_subtitle--en');
 const homeSubEs = document.getElementById('home_subtitle--es');
 
@@ -231,9 +228,6 @@ for (let i = 0; i < traductionBtn.length; i++) {
       enTitle.classList.add('disabled');
       esTitle.classList.remove('disabled');
 
-      esAboutBloy.classList.remove('disabled');
-      enAboutBloy.classList.add('disabled');
-
       nameInput.placeholder = 'Ingrese su nombre';
       emailInput.placeholder = 'Ingrese su email';
       messageInput.placeholder = 'Ingrese su mensaje';
@@ -255,9 +249,6 @@ for (let i = 0; i < traductionBtn.length; i++) {
       }
       esTitle.classList.add('disabled');
       enTitle.classList.remove('disabled');
-
-      enAboutBloy.classList.remove('disabled');
-      esAboutBloy.classList.add('disabled');
 
       nameInput.placeholder = 'Enter your name';
       emailInput.placeholder = 'Enter your email';
