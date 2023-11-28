@@ -142,7 +142,7 @@ p {
   box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
-  z-index: 1000;
+  z-index: 3000;
 }
 .navbar {
   position: relative;
@@ -153,7 +153,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 3000;
 }
 .navbar__menu--mobile {
   display: none;
