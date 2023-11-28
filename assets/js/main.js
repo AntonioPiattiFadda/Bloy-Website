@@ -61,7 +61,9 @@ function openSkillsBar() {
   // skillsIcon.classList.toggle('skills__icon-down-opened');
 }
 skillsIcon.addEventListener('click', openSkillsBar);
+
 /*==================== ACCORDION SERVICES 2 ====================*/
+
 const skillList2 = document.getElementById('services__list-second');
 const skillsIcon2 = document.getElementById('services__arrow-second');
 
@@ -192,7 +194,6 @@ document.getElementById('form').addEventListener('submit', function (event) {
 });
 
 /*==================== TRADUCCION EN/ES ====================*/
-
 const traductionBtn = document.getElementsByClassName('traductionBtn');
 const textsToChange = document.querySelectorAll('[data-section]');
 

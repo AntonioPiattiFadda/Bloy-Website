@@ -197,7 +197,7 @@ body {
 }
 .navbar__menu--button {
   width: 48px;
-  height: 50px;
+  height: 48px;
   gap: 0.625rem;
   background-color: transparent;
   border: 1px solid #fff;
@@ -207,8 +207,12 @@ body {
   font-size: var(--nav-anchor-size);
 }
 .navbar__buttons--contact {
+  display: flex;
   width: 115px;
+  justify-content: center;
   height: 48px;
+  align-items: center;
+  text-decoration: none;
 }
 .navbar__menu--button a {
   color: white;
