@@ -47,7 +47,8 @@
     "contact_form--title": "¿Con qué podemos ayudarte?",
     "contact_form--name": "Nombre <span class='contact__obligatorio'>(Obligatorio)</span>",
     "contact_form--email": "Correo electrónico  <span class='contact__obligatorio'>(Obligatorio)</span>",
-    "contact_form--message": "Mensaje <span class='contact__obligatorio'>(Obligatorio)</span>"
+    "contact_form--message": "Mensaje <span class='contact__obligatorio'>(Obligatorio)</span>",
+    "contact_form--ux": "<input class='mycheck' name='ux' type='checkbox' id='UX'> Diseño UX/UI"
   },
   "footer_data": {
     "footer_title": "Contacto",

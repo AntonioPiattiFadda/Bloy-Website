@@ -827,6 +827,8 @@ p {
   font-weight: 600;
   line-height: 1.5rem; /* 150% */
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2500;
 }
 
 .contact__label--name,
@@ -853,7 +855,7 @@ p {
   transition: background-color 0.3s ease-in-out;
   border-radius: 50%;
   position: relative;
-  z-index: 700;
+  z-index: 2500;
 }
 
 .mycheck:checked {
@@ -884,7 +886,7 @@ p {
   font-size: var(--nav-anchor-size);
   margin-bottom: 1rem;
   position: relative;
-  z-index: 700;
+  z-index: 2500;
 }
 .contact__form input:focus {
   outline: none;

@@ -283,24 +283,22 @@
 
                     <div class="contact__checkboxes">
                       <div>
-                        <!-- <label for="data" class="contact__label--data"> <input class="mycheck" name="data" type="checkbox" id="data" > Data & Analytics</label> -->
-                        <label form="ux" class="contact__label--ux"> <input class="mycheck" name="ux" type="checkbox" id="ux" > UX/UI Designer</label>
-
+                        <label for="Data" class="contact__label--data"> <input class="mycheck" name="data" type="checkbox" id="Data" >  Data & Analytics</label>
                         <span></span>
                       </div>
                       <div>
-                         <label form="ux" class="contact__label--ux"> <input class="mycheck" name="ux" type="checkbox" id="ux" > UX/UI Designer</label>
+                         <label form="UX" class="contact__label--ux" data-section="contact_data" data-value="contact_form--ux"> <input class="mycheck" name="ux" type="checkbox" id="UX"> UX/UI Design</label>
                         <span></span>
 
                       </div>
                     </div>
 
-                    <label for="name" class="contact__label--name" data-section="contact_data" data-value="contact_form--name" >Nombre <span class="contact__obligatorio">(Obligatorio)</span></label>
-                    <input id="name" placeholder="Ingrese su nombre" class="contact__input--name" type="text" name="name">
-                    <label for="email" class="contact__label--email" data-section="contact_data" data-value="contact_form--email" >Correo electrónico  <span class="contact__obligatorio">(Obligatorio)</span></label>
-                    <input id="email" placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email">
-                    <label for="message" class="contact__label--message" data-section="contact_data" data-value="contact_form--message">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
-                    <textarea  id="message" placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" cols="30" rows="10"></textarea>
+                    <label for="name__input" class="contact__label--name" data-section="contact_data" data-value="contact_form--name" for="name">Nombre <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <input id="name__input" placeholder="Ingrese su nombre" class="contact__input--name" type="text" name="name" id="name">
+                    <label for="email__input" class="contact__label--email" data-section="contact_data" data-value="contact_form--email" for="name">Correo electrónico  <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <input id="email__input" placeholder="Ingrese su email" class="contact__input--email"  type="email" name="email" id="email">
+                    <label for="message__input" class="contact__label--message" data-section="contact_data" data-value="contact_form--message" for="name">Mensaje <span class="contact__obligatorio">(Obligatorio)</span></label>
+                    <textarea  id="message__input" placeholder="Ingrese su mensaje" class="contact__input--message"  name="message" id="message" cols="30" rows="10"></textarea>
                     <div class="contact__button-container">
                       <div id="error__message" class="error__message"></div>
                       <div class="modal" id="mensajeEnviadoModal">
