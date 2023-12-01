@@ -58,6 +58,10 @@ p {
   position: relative;
   z-index: 2000;
 }
+label {
+  position: relative;
+  z-index: 2500;
+}
 .section {
   padding: 2rem 0 4rem;
   background-color: #080808;
@@ -860,10 +864,14 @@ p {
 
 .mycheck:checked {
   background-color: var(--violeta);
+  position: relative;
+  z-index: 2500;
 }
 
 .mycheck:focus {
   outline: none;
+  position: relative;
+  z-index: 2500;
 }
 
 .contact__obligatorio {
