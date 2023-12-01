@@ -836,33 +836,24 @@ p {
 }
 
 .mycheck {
-  border: 3px solid red;
   background-image: url('../img/checkBoxes.svg');
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  width: 300px;
-  height: 300px;
   appearance: none;
   display: inline-block;
   vertical-align: middle;
   background-origin: border-box;
   padding: 0;
-  user-select: none;
-  flex-shrink: 0;
-  color: #2563eb;
-  border-width: 1px;
-}
-
-.mycheck {
   cursor: pointer;
   background-color: var(--background-color);
   width: 24px;
   height: 24px;
-  appearance: none;
   border: 2px solid var(--font-color);
   transition: background-color 0.3s ease-in-out;
   border-radius: 50%;
+  position: relative;
+  z-index: 700;
 }
 
 .mycheck:checked {
@@ -892,6 +883,8 @@ p {
   border-bottom: 1px solid #fff;
   font-size: var(--nav-anchor-size);
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 700;
 }
 .contact__form input:focus {
   outline: none;
@@ -911,6 +904,8 @@ p {
   font-size: var(--nav-anchor-size);
   margin-bottom: 1rem;
   outline: none;
+  position: relative;
+  z-index: 700;
 }
 
 .contact__button-container {

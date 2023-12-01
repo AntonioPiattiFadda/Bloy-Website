@@ -79,9 +79,9 @@ skillsIcon2.addEventListener('click', openSkillsBar2);
 const sendButtonEs = document.getElementById('send--button--es');
 const sendButtonEn = document.getElementById('send--button--en');
 
-const nameInput = document.getElementById('name__input');
-const emailInput = document.getElementById('email__input');
-const messageInput = document.getElementById('message__input');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
 
 function validarFormulario(language) {
   var errorMessage = document.getElementById('error__message');
