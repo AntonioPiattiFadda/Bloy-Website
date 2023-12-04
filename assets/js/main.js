@@ -203,6 +203,9 @@ const enTitle = document.getElementById('home_titleEn');
 const homeSubEn = document.getElementById('home_subtitle--en');
 const homeSubEs = document.getElementById('home_subtitle--es');
 
+const bloyAboutImgEs = document.getElementById('about__bloy--es');
+const bloyAboutImgEn = document.getElementById('about__bloy--en');
+
 const changeLanguage = async (language) => {
   const requestJson = await fetch(`../assets/languages/${language}.json`);
   const texts = await requestJson.json();
@@ -241,6 +244,9 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       navMenu.classList.remove('show-menu');
       navToogle.classList.remove('show-menu-icon');
+
+      bloyAboutImgEs.classList.remove('disabled');
+      bloyAboutImgEn.classList.add('disabled');
     } else {
       for (const enButton of enButtons) {
         enButton.classList.add('navbar__languague--selected');
@@ -263,6 +269,9 @@ for (let i = 0; i < traductionBtn.length; i++) {
 
       navMenu.classList.remove('show-menu');
       navToogle.classList.remove('show-menu-icon');
+
+      bloyAboutImgEs.classList.add('disabled');
+      bloyAboutImgEn.classList.remove('disabled');
     }
   });
 }
