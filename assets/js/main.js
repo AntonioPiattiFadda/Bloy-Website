@@ -268,7 +268,6 @@ for (let i = 0; i < traductionBtn.length; i++) {
       homeSubEs.classList.add('disabled');
 
       navMenu.classList.remove('show-menu');
-      navToogle.classList.remove('show-menu-icon');
 
       bloyAboutImgEs.classList.add('disabled');
       bloyAboutImgEn.classList.remove('disabled');
