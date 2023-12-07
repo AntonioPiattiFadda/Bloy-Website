@@ -138,6 +138,13 @@ label {
   z-index: 500;
   display: none;
 }
+.disabled {
+  display: none;
+}
+.inhabilitado {
+  display: none;
+}
+
 /*==================== NAV ====================*/
 .header {
   position: fixed;
@@ -514,6 +521,7 @@ label {
 
 .services__arrow-first,
 .services__arrow-second {
+  will-change: background, box-shadow;
   width: 82px;
   height: 82px;
   transition: background 0.8s ease-in-out, box-shadow 0.5s ease-in-out 0.2s;
@@ -533,6 +541,7 @@ label {
 
 .services__arrow-first-up,
 .services__arrow-second-up {
+  will-change: background, box-shadow;
   background-image: url('../img/arrowUp.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -2074,5 +2083,8 @@ label {
 }
 
 .disabled {
+  display: none;
+}
+.inhabilitado {
   display: none;
 }
